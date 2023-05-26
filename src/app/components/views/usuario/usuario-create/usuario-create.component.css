@@ -5,11 +5,12 @@
 }
 
 .campo_menor {
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
-h2 {
+h1 {
 margin: 2rem;
+text-align: center;
 }
 
 form {
@@ -19,12 +20,14 @@ form {
 
 .buttons{
   width: 100%;
-  text-align: start;
-  margin-left: 2rem;
+  text-align: center;
+  margin: 0.0rem;
 }
 
 button {
-  margin-right: 2rem;
+  margin: 1rem;
   padding-right: 2rem;
   padding-left: 2rem;
+
 }
+
