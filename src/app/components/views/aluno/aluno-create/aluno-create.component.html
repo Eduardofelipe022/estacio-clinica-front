@@ -43,6 +43,14 @@
   </mat-select>
 </mat-form-field>
 
+<mat-form-field class="campo_maior">
+  <mat-label>E-mail *</mat-label>
+  <input type="email" matInput [(ngModel)]="aluno.email"
+    type="email"
+    name="email"
+    placeholder="Ex: clinica@estacio.com.br"required>
+  </mat-form-field>
+
 <mat-form-field class="campo_menor">
   <mat-label><strong>Curso</strong></mat-label>
   <mat-select [(ngModel)]="aluno.curso" name="select">
@@ -52,19 +60,11 @@
   </mat-select>
 </mat-form-field>
 
-<mat-form-field class="campo_maior">
-  <mat-label>E-mail *</mat-label>
-  <input type="email" matInput [(ngModel)]="aluno.email"
-    type="email"
-    name="email"
-    placeholder="Ex: clinica@estacio.com.br"required>
-  </mat-form-field>
-
   <mat-form-field class="campo_menor">
-    <mat-label>Senha *</mat-label>
+    <mat-label><strong>Senha *</strong></mat-label>
     <input matInput [(ngModel)]="aluno.senha"
     type="number"
-    name="senha" required>
+    name="senha" required placeholder="***********">
   </mat-form-field >
 
   <mat-form-field class="campo_menor">
