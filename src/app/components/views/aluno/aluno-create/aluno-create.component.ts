@@ -25,12 +25,11 @@ export class AlunoCreateComponent implements OnInit {
     email: '',
     senha: '',
     curso: '',
+    telefone:''
   };
   selects: Especialidade[] = [];
   tipos: TipoPerfil[] = [
-    { valor: 'ADMIN', viewValor: 'ADMIN' },
-    { valor: 'ALUNO', viewValor: 'ALUNO' },
-    { valor: 'RECEPCIONISTA', viewValor: 'RECEPCIONISTA' },
+    { valor: 'ALUNO', viewValor: 'ALUNO' }
   ];
 
   constructor(

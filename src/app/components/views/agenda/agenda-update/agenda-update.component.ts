@@ -20,7 +20,6 @@ export class AgendaUpdateComponent {
     cpf: '',
     especialidade: '',
     nomeAluno: '',
-    presenca: true,
   };
 
   especialidades: Especialidade[] = [];
@@ -49,12 +48,10 @@ export class AgendaUpdateComponent {
       this.agenda.cpf = resposta.cpf;
       this.agenda.especialidade = resposta.especialidade;
       this.agenda.nomeAluno = resposta.nomeAluno;
-      this.agenda.presenca = resposta.presenca;
     });
   }
 
   public atualizarAgenda(): void {
-    this.agenda.presenca = this.atividadeFixa;
     this.service.updateAgendaService(this.agenda).subscribe(
       (resposta) => {
         this.router.navigate(['agenda']);

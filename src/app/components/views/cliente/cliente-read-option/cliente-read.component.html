@@ -1,68 +1,63 @@
-<app-header></app-header>
-<app-footer></app-footer>
-<h1></h1>
+<body>
+  <app-header></app-header>
+  <app-footer></app-footer>
 <div class="content">
-<h2>Lista de Pacientes</h2>
-    <button class="mat-elevation-z8" (click)="navegarParaClienteCreate()" mat-raised-button color="primary">Novo Paciente</button>
+  <h1>Lista de Pacientes</h1>
+  <button class="mat-elevation-z8" (click)="navegarParaClienteCreate()" mat-raised-button color="primary">Novo Paciente</button>
 
-    <mat-form-field>
-      <mat-label>Filtro</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
-    </mat-form-field>
+  <mat-form-field>
+    <mat-label>Filtro</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+  </mat-form-field>
 
-    <a class="total">Total de Pacientes:  {{ qtdClientes }}</a>
+  <a class="total">Total de Pacientes:  {{ qtdClientes }}</a>
 
-    <div class="mat-elevation-z8 content-table">
+  <div class="mat-elevation-z8 content-table">
 
-      <table class="table" mat-table [dataSource]="dataSource">
-        <!-- Id Coluna -->
-        <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef>ID</th>
-          <td mat-cell *matCellDef="let row">{{ row.id }}</td>
-        </ng-container>
+    <table class="table" mat-table [dataSource]="dataSource">
 
-        <!-- Nome Coluna -->
-        <ng-container matColumnDef="nome">
-          <th mat-header-cell *matHeaderCellDef>NOME</th>
-          <td mat-cell *matCellDef="let row">{{ row.nome }}</td>
-        </ng-container>
-        <!-- Nome Coluna -->
-        <ng-container matColumnDef="dataNascimento">
-          <th mat-header-cell *matHeaderCellDef>DATA DE NASC</th>
-          <td mat-cell *matCellDef="let row">{{ row.dataNascimento }}</td>
-        </ng-container>
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+      </ng-container>
 
-        <ng-container matColumnDef="cpf">
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef>NOME</th>
+        <td mat-cell *matCellDef="let row">{{ row.nome }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="dataNascimento">
+        <th mat-header-cell *matHeaderCellDef>DATA DE NASC</th>
+        <td mat-cell *matCellDef="let row">{{ row.dataNascimento }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="cpf">
           <th mat-header-cell *matHeaderCellDef>CPF</th>
           <td mat-cell *matCellDef="let row">{{ row.cpf }}</td>
         </ng-container>
 
-        <!-- Livros Coluna -->
-        <ng-container matColumnDef="consultas">
-          <th class="mat-header" mat-header-cell *matHeaderCellDef>CONSULTAS</th>
-          <td mat-cell *matCellDef="let row">
-            <a class="consultas" routerLink="{{ row.id }}/consultas">
-              <i class="material-icons">folder_copy</i>
-            </a>
-          </td>
+        <ng-container matColumnDef="idade">
+          <th mat-header-cell *matHeaderCellDef>IDADE</th>
+          <td mat-cell *matCellDef="let row">{{ row.idade }}</td>
         </ng-container>
 
-        <!-- Ações de botoes Coluna -->
+        <ng-container matColumnDef="telefone">
+          <th mat-header-cell *matHeaderCellDef>TELEFONE</th>
+          <td mat-cell *matCellDef="let row">{{ row.telefone }}</td>
+        </ng-container>
+
         <ng-container matColumnDef="acoes">
-          <th class="mat-header-acoes" mat-header-cell *matHeaderCellDef>AÇÕES</th>
-          <td mat-cell *matCellDef="let row">
-
-            <button class="agenda" mat-icon-button color="primary" routerLink="agenda/create/{{ row.id }}" aria-label="Example icon button with a home icon">
-              <mat-icon>calendar_today</mat-icon>
-            </button>
-            <a class="edit" routerLink="update/{{ row.id }}">
-              <i class="material-icons">edit</i>
-            </a>
-            <a class="delete" routerLink="delete/{{ row.id }}">
-              <i class="material-icons">delete</i>
-            </a>
-          </td>
-        </ng-container>
+      <th class="mat-header-acoes" mat-header-cell *matHeaderCellDef>OPÇÕES</th>
+       <td mat-cell *matCellDef="let row">
+         <button class="button_Opcoes" mat-button [matMenuTriggerFor]="menu" mat-raised-button color="primary">Opções</button>
+         <mat-menu #menu="matMenu">
+           <button class="consultas" routerLink="{{ row.id }}/consultas" mat-menu-item><mat-icon class="consultas">folder_copy</mat-icon> Consultas</button>
+           <button routerLink="agenda/create/{{ row.id }}" mat-menu-item><mat-icon class="agenda">calendar_today</mat-icon> Agendamento</button>
+           <button routerLink="update/{{ row.id }}" mat-menu-item><mat-icon class="edit">edit</mat-icon> Atualização</button>
+           <button routerLink="delete/{{ row.id }}" mat-menu-item><mat-icon class="delete">delete</mat-icon> Delete</button>
+          </mat-menu>
+        </td>
+      </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
@@ -72,10 +67,9 @@
         </tr>
       </table>
       <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]"
-                 showFirstLastButtons
-                 aria-label="Select page of periodic elements">
-  </mat-paginator>
-    </div>
+      showFirstLastButtons
+      aria-label="Select page of periodic elements">
+    </mat-paginator>
   </div>
-
-
+ </div>
+</body>

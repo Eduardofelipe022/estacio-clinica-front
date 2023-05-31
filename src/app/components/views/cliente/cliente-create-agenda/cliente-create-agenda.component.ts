@@ -26,6 +26,7 @@ export class ClienteCreateAgendaComponent implements OnInit {
     naturalidade: '',
     endereco: '',
     cidade: '',
+    idade:''
   };
   agenda: Agenda = {
     nome: '',
@@ -34,7 +35,6 @@ export class ClienteCreateAgendaComponent implements OnInit {
     cpf: '',
     especialidade: '',
     nomeAluno: '',
-    presenca: false
   };
 
   selects: Especialidade[] = [];
@@ -65,7 +65,7 @@ export class ClienteCreateAgendaComponent implements OnInit {
     this.agenda.nome = this.cliente.nome;
     this.agenda.fone = this.cliente.telefone;
     this.agenda.cpf = this.cliente.cpf;
-    this.serviceAgen.criarAgendaService(this.agenda).subscribe(
+    this.serviceAgen.criarAgendaService(this.cliente.id! ,this.agenda).subscribe(
       (resposta) => {
         this.router.navigate(['agenda']);
         this.serviceAgen.mensagem('Agendamento criado com sucesso!');

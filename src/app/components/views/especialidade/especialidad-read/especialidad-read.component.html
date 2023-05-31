@@ -1,28 +1,34 @@
-<app-header></app-header>
-<app-footer></app-footer>
+<body>
+  <app-header></app-header>
+  <app-footer></app-footer>
 
-<div class="content">
+  <div class="content">
 
-  <h2>Especialidades</h2>
- <button class="mat-elevation-z8" (click)="navegarParaEspecialidadeCreate()" mat-raised-button color="primary">Adicionar Especialidade</button>
+    <h1>Especialidades</h1>
 
-    <div class="mat-elevation-z8 content-table">
+  <mat-form-field class="campo_maior">
+    <mat-label>Especialidade</mat-label>
+    <input matInput [(ngModel)]="especialidadeCreate.valor"
+    type="text"
+    name="nome"/>
+  </mat-form-field>
+
+ <button (click)="criarEspecialidade()" class="mat-elevation-z8" mat-raised-button color="primary">ADICIONAR</button>
+
+  <div class="mat-elevation-z8 content-table">
       <table class="table" mat-table [dataSource]="especialidade">
 
-        <!-- Nome Coluna -->
         <ng-container matColumnDef="especialidade">
           <th mat-header-cell *matHeaderCellDef>ESPECIALIDADE</th>
           <td mat-cell *matCellDef="let row">{{ row.valor }}</td>
         </ng-container>
 
-        <!-- Ações de botoes Coluna -->
         <ng-container matColumnDef="delete">
-          <th class="mat-header-acoes" mat-header-cell *matHeaderCellDef>Apagar</th>
+          <th class="mat-header-acoes" mat-header-cell *matHeaderCellDef>APAGAR</th>
           <td mat-cell *matCellDef="let row">
 
-            <a class="delete" routerLink="delete/{{ row.id }}">
-              <i class="material-icons">delete</i>
-            </a>
+            <button class="delete" (click)="deletarEspecialidade(row.id)" mat-icon-button><mat-icon>delete</mat-icon></button>
+
           </td>
         </ng-container>
 
@@ -31,3 +37,4 @@
       </table>
     </div>
   </div>
+</body>

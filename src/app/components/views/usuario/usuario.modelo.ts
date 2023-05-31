@@ -7,4 +7,5 @@ export interface Usuario {
   endereco: string;
   email: string;
   senha: string;
+  telefone: string
 }

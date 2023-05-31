@@ -19,6 +19,7 @@ export class UsuarioDeleteComponent implements OnInit {
     endereco: "",
     email: "",
     senha: "",
+    telefone:''
     };
 
   constructor(private service: UsuarioService, private route: ActivatedRoute, private router: Router){

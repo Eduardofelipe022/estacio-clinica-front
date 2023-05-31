@@ -1,44 +1,48 @@
 import { Agenda } from './../agenda.modelo';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
 import { AgendaService } from '../agenda.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { ClienteService } from '../../cliente/cliente.service';
+import { Router } from '@angular/router';
+import { Cliente } from '../../cliente/cliente.modelo';
 
 @Component({
   selector: 'app-agenda-read',
   templateUrl: './agenda-read.component.html',
-  styleUrls: ['./agenda-read.component.css']
+  styleUrls: ['./agenda-read.component.css'],
 })
 export class AgendaReadComponent implements OnInit {
-
   displayedColumns: string[] = [
-    "id",
-    "nome",
-    "cpf",
-    "data",
-    "fone",
-    "especialidade",
-    "nomeAluno",
-    "acoes"
+    'nome',
+    'cpf',
+    'data',
+    'fone',
+    'especialidade',
+    'nomeAluno',
+    'acoes',
   ];
 
-
+  cpf: any;
+  cliente!: Cliente;
   agenda: Agenda[] = [];
   qtdAgendadas!: number;
   dataSource!: MatTableDataSource<Agenda>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-constructor(private service: AgendaService, private router: Router) {
-    this.service.listarAgendasService().subscribe(resposta => {
+  constructor(
+    private serviceAgenda: AgendaService,
+    private router: Router,
+    private serviceCliente: ClienteService
+  ) {
+    this.serviceAgenda.listarAgendasService().subscribe((resposta) => {
       this.dataSource = new MatTableDataSource(resposta);
       this.dataSource.paginator = this.paginator;
-      })
+    });
   }
 
   public ngOnInit(): void {
-   this.listarAgenda();
-   this.quantidadeAgendadas();
+    this.quantidadeAgendadas();
   }
 
   applyFilter(event: Event) {
@@ -46,19 +50,21 @@ constructor(private service: AgendaService, private router: Router) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  public listarAgenda() {
-    this.service.listarAgendasService().subscribe((resposta) => {
-      this.agenda = resposta;
-    });
-  }
-
   public quantidadeAgendadas() {
-    this.service.quantidadeAgendadas().subscribe((resposta) => {
+    this.serviceAgenda.quantidadeAgendadas().subscribe((resposta) => {
       this.qtdAgendadas = resposta;
     });
   }
+  onClick(): void {
+    this.serviceCliente.buscarPorCpf(this.cpf).subscribe((resposta) => {
+      this.cliente = resposta;
+     if(this.cliente != null){
+       this.router.navigate(['clientes/' + this.cliente.id + '/consultas']);
+      } else {
+        this.serviceAgenda.mensagem('Paciente não encontrado!')
+      }
 
-  public navegarParaAgendaCreate() {
-    this.router.navigate(["agenda/create"]);
+    }
+    );
   }
 }

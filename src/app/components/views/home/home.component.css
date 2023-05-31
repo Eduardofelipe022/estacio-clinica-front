@@ -1,22 +1,35 @@
+
 .home {
     width: 90%;
     margin: auto;
     margin-top: 1rem;
     padding-left: 2rem;
+    font-size: 1.2rem;
+    background-color: rgb(115, 186, 228);
 }
 
 @media(max-width: 450px) {
-    .home{
-        width: 70%;
-    }
+  .home{
+      width: 70%;
+  }
 }
 @media(max-width: 770px) {
-    .home{
-        width: 90%;
-    }
+  .home{
+      width: 90%;
+  }
 }
 
 .img {
     width: 80%;
     height: auto 1rem;
 }
+
+.example-card {
+  max-width: 200px;
+}
+
+
+body {
+  background-image: url("src/assets/imagem/imagemHome_6.webp");
+  background-size: cover;
+  }

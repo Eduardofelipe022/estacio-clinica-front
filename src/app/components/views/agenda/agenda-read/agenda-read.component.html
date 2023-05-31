@@ -1,39 +1,31 @@
+<body>
 <app-header></app-header>
 <app-footer></app-footer>
-<div class="content">
-  <h2>Agendamento de Pacientes</h2>
-
- <button class="mat-elevation-z8" (click)="navegarParaAgendaCreate()" mat-raised-button color="primary">Novo Agendamento</button>
+  <div class="content">
+    <h1>Agenda de Pacientes</h1>
 
 <mat-form-field>
-  <mat-label>Filtro</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+  <mat-label>Filtro por Qualquer Coluna</mat-label>
+  <input matInput [(ngModel)]="cpf" (keyup)="applyFilter($event)" #input>
 </mat-form-field>
 
-    <a class="total">Total de agendamentos:  {{ qtdAgendadas }}</a>
+<a class="total">Total de agendamentos:  {{ qtdAgendadas }}</a>
 
-    <div class="mat-elevation-z8 content-table">
-      <table class="table" mat-table [dataSource]="dataSource">
-        <!-- Id Coluna -->
-        <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef>Nº</th>
-          <td mat-cell *matCellDef="let row">{{ row.id }}</td>
-        </ng-container>
+<div class="mat-elevation-z8 content-table">
+  <table class="table" mat-table [dataSource]="dataSource">
 
-        <!-- Nome Coluna -->
-        <ng-container matColumnDef="nome">
-          <th mat-header-cell *matHeaderCellDef>NOME</th>
-          <td mat-cell *matCellDef="let row">{{ row.nome }}</td>
-        </ng-container>
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef>NOME</th>
+      <td mat-cell *matCellDef="let row">{{ row.nome }}</td>
+    </ng-container>
 
-        <!-- Nome Coluna -->
-        <ng-container matColumnDef="cpf">
-          <th mat-header-cell *matHeaderCellDef>CPF</th>
-          <td mat-cell *matCellDef="let row">{{ row.cpf }}</td>
-        </ng-container>
+    <ng-container matColumnDef="cpf">
+      <th mat-header-cell *matHeaderCellDef>CPF</th>
+      <td mat-cell *matCellDef="let row">{{ row.cpf }}</td>
+    </ng-container>
 
         <ng-container matColumnDef="data">
-          <th mat-header-cell *matHeaderCellDef>DATA</th>
+          <th mat-header-cell *matHeaderCellDef>DATA/ATENDIMENTO</th>
           <td mat-cell *matCellDef="let row">{{ row.data }}</td>
         </ng-container>
 
@@ -52,17 +44,18 @@
           <td mat-cell *matCellDef="let row">{{ row.nomeAluno }}</td>
         </ng-container>
 
-        <!-- Ações de botoes Coluna -->
         <ng-container matColumnDef="acoes">
           <th class="mat-header" mat-header-cell *matHeaderCellDef>OPÇÕES</th>
           <td mat-cell *matCellDef="let row">
 
-            <button class="edit" mat-icon-button color="primary" [disabled]="!row.presenca" routerLink="update/{{ row.id }}" aria-label="Example icon button with a home icon">
-              <mat-icon>edit</mat-icon>
-            </button>
+                 <button class="button_Opcoes" mat-button [matMenuTriggerFor]="menu" mat-raised-button color="primary">Opções</button>
+                  <mat-menu #menu="matMenu">
+                    <button class="consultas" (click)="onClick()" mat-menu-item><mat-icon class="consultas">folder_copy</mat-icon> Consultas</button>
+                    <button routerLink="update/{{ row.id }}" mat-menu-item><mat-icon class="edit">edit</mat-icon> Atualização</button>
+                  </mat-menu>
+                </td>
+              </ng-container>
 
-          </td>
-        </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 
@@ -74,12 +67,13 @@
      </table>
 
 
-      <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]"
-      showFirstLastButtons
-                 aria-label="Select page of periodic elements">
-                </mat-paginator>
-              </div>
+     <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]"
+     showFirstLastButtons
+     aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
 </div>
+</body>
 
 
 

@@ -34,7 +34,8 @@ export class ClienteConsultaDetalhadaComponent implements OnInit{
     nomeMae: "",
     naturalidade:"",
     endereco: "",
-    cidade:""
+    cidade:"",
+    idade:''
   };
 
 

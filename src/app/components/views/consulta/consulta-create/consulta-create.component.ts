@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Consulta } from '../consulta.modelo';
 import { ConsultaService } from '../consulta.service';
+import { ClienteService } from '../../cliente/cliente.service';
 
 @Component({
   selector: 'app-consulta-create',
@@ -22,23 +23,33 @@ export class ConsultaCreateComponent implements OnInit{
     observacao: ""
   }
 
-  id_cliente: String = "";
-
+  id_cliente: string = "";
+  nome!: String
  constructor(
-    private service: ConsultaService,
+    private serviceConsulta: ConsultaService,
+    private serviceCliente: ClienteService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.id_cliente = this.route.snapshot.paramMap.get("id_cliente")!;
+    this.nome = this.route.snapshot.paramMap.get("nome")!;
+    this.buscarNome();
   }
 
+  buscarNome (): void{
+  this.serviceCliente.buscarPorId(this.id_cliente).subscribe((reposta) => {
+    this.nome = reposta.nome;
+  });
+  }
+
+
   public criarConsulta(): void {
-    this.service.criarConsultaService(this.id_cliente, this.consulta).subscribe(
+    this.serviceConsulta.criarConsultaService(this.id_cliente, this.consulta).subscribe(
       (resposta) => {
         this.router.navigate(["clientes/" + this.id_cliente + "/consultas"]);
-        this.service.mensagem("Consulta criada com sucesso!");
+        this.serviceConsulta.mensagem("Consulta criada com sucesso!");
       })
   }
 

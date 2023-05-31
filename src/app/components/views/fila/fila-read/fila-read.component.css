@@ -4,31 +4,28 @@
   margin-top: 5%;
 }
 
-.title {
-  text-align: center;
-  margin-right: 5rem;
+.input_nome {
+ margin-left: 10px;
 }
 
-.title h1 {
-  font-size: 2rem;
-  margin-bottom: 3rem;
-  font-style: italic;
-  font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
+h1 {
+  text-align: center;
 }
 
 button {
-  margin-bottom: 1rem;
+  margin-left: 10px;
 }
 
 .total {
-  margin-left: 20rem;
+  color: black;
+  margin-left: 80%;
   font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
 
 }
 
-.btn1 {
-  color: rgb(8, 0, 0);
-  margin-top: 1rem;
+body {
+  background-color: rgb(115, 186, 228);
+  background-size: cover;
 }
-

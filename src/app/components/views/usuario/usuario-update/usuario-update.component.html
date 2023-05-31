@@ -1,8 +1,8 @@
-<app-header></app-header>
-<app-footer></app-footer>
-<h1></h1>
+<body>
+  <app-header></app-header>
+  <app-footer></app-footer>
+  <h1>Atualizar Usuário</h1>
 <form>
-  <h2>Atualizar Usuário</h2>
 
   <mat-form-field class="campo_menor">
     <mat-label>Matrícula *</mat-label>
@@ -19,19 +19,27 @@
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
-  <mat-label>Cpf *</mat-label>
-  <input matInput [(ngModel)]="usuario.cpf"
-  type="text"
-  name="cpf"
-  placeholder="Ex: 12345678901"/>
-</mat-form-field>
+    <mat-label>Cpf *</mat-label>
+    <input matInput maxlength="11" [(ngModel)]="usuario.cpf"
+    type="text"
+    name="cpf"
+    placeholder="Ex: 12345678901"/>
+  </mat-form-field>
 
-<mat-form-field class="campo_maior">
+  <mat-form-field class="campo_maior">
   <mat-label>Endereço *</mat-label>
   <input
   matInput [(ngModel)]="usuario.endereco"
   type="text"
   name="endereco"/>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Telefone</mat-label>
+  <input matInput maxlength="11" [(ngModel)]="usuario.telefone"
+  type="text"
+  name="telefone"
+  placeholder="Ex: 12345678901"/>
 </mat-form-field>
 
 <mat-form-field class="campo_menor">
@@ -43,24 +51,24 @@
   </mat-select>
 </mat-form-field>
 
-  <mat-form-field class="campo_maior">
-    <mat-label>Email *</mat-label>
-    <input type="email" matInput [(ngModel)]="usuario.email"
-    name="email"
-    placeholder="Ex: clinica@yahoo.com"/>
-  </mat-form-field>
+<mat-form-field class="campo_maior">
+  <mat-label>Email *</mat-label>
+  <input type="email" matInput [(ngModel)]="usuario.email"
+  name="email"
+  placeholder="Ex: clinica@yahoo.com"/>
+</mat-form-field>
 
-  <mat-form-field class="campo_menor">
-    <mat-label>Senha *</mat-label>
-    <input matInput [(ngModel)]="usuario.senha"
-    type="text"
-    name="senha"/>
-  </mat-form-field>
+<mat-form-field class="campo_menor">
+  <mat-label>Senha *</mat-label>
+  <input matInput [(ngModel)]="usuario.senha"
+  type="password"
+  name="senha"/>
+</mat-form-field>
 
 
-  <div class="buttons">
-    <!-- Botao criar Categoria -->
-    <button (click)="atualizarUsuario()" class="mat-elevation-z8" mat-raised-button color="primary">Atualizar</button>
-    <button (click)="navegarParaListaUsuarios()" class="mat-elevation-z8" mat-raised-button color="warn">Cancelar</button>
-  </div>
+<div class="buttons">
+  <button (click)="atualizarUsuario()" class="mat-elevation-z8" mat-raised-button color="primary">Atualizar</button>
+  <button (click)="navegarParaListaUsuarios()" class="mat-elevation-z8" mat-raised-button color="warn">Cancelar</button>
+</div>
 </form>
+</body>

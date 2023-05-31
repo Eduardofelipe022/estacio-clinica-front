@@ -1,6 +1,6 @@
 .content {
-    width: 80%;
-    margin: 1.4rem auto auto auto;
+  width: 80%;
+  margin: 1.4rem auto auto auto;
 }
 
 .mat-mdc-form-field {
@@ -8,45 +8,43 @@
   margin-left: 5rem;
 }
 
-.title {
-    text-align: center;
-    margin-right: 5rem;
-}
-
-.title h1 {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-    font-style: italic;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgba(81, 81, 201, 0.986);
+h1 {
+  text-align: center;
 }
 
 button {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .total {
-    margin-left: 30rem;
-    font-size: 1rem;
-
+  color: black;
+  margin-left: 80%;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
 }
+
+.button_Opcoes {
+  margin-top: 15px;
+}
+
 .consultas {
-    color: rgba(196, 105, 31, 0.884);
-    margin-left: 1.5rem;
+  color: rgba(196, 105, 31, 0.884);
 }
 
 .agenda {
   color: green;
 }
 
-.delete {
-    color: rgb(253, 0, 0);
-    margin-left: .50rem;
-}
-
 .edit {
-    color: rgb(55, 11, 211);
+  color: blue;
 }
 
+.delete {
+  color: rgb(253, 0, 0);
+}
 
+body {
+  background-color: rgb(115, 186, 228);
+  background-size: cover;
+}

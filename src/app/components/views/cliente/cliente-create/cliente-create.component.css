@@ -8,8 +8,8 @@
     margin-left: 2rem;
 }
 
-h2 {
-  margin: 2rem;
+h1 {
+  text-align: center;
 }
 
 .form {
@@ -27,3 +27,9 @@ button {
     padding-right: 2rem;
     padding-left: 2rem;
 }
+
+body {
+  background-color: rgb(115, 186, 228);
+  background-size: cover;
+}
+

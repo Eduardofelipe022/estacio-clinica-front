@@ -11,10 +11,15 @@ import { FilaService } from '../fila.service';
 export class FilaReadComponent implements OnInit{
 
   displayedColumns: string[] = [
-    "nome",
     "sala",
+    "nome",
     "acoes"
   ];
+
+  filaCreate: Fila = {
+    nome: "",
+    sala: ""
+  };
 
   fila: Fila[] = [];
   qtdFila!: number;
@@ -24,6 +29,19 @@ export class FilaReadComponent implements OnInit{
   public ngOnInit(): void {
     this.listarFila();
     this.quantidadeFila();
+  }
+
+  public criarOrdemDeChegada(): void {
+    this.service.criarFilaService(this.filaCreate).subscribe(
+      (resposta) => {
+        location.reload();
+      },
+      (err) => {
+        for (let i = 0; i < err.error.errors.length; i++) {
+          this.service.mensagem("Campo Obrigatório!");
+        }
+      }
+    );
   }
 
   public listarFila() {
@@ -40,6 +58,12 @@ export class FilaReadComponent implements OnInit{
 
   public navegarParaFilaCreate() {
     this.router.navigate(["fila/create"]);
+  }
+
+  public deletarDaFila(id: any): void {
+    this.service.deleteFilaService(id).subscribe((reposta) => {
+      location.reload();
+    });
   }
 
 }

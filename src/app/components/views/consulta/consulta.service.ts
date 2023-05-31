@@ -18,9 +18,14 @@ export class ConsultaService {
     return this.http.get<Consulta>("http://localhost:8086/consultas/"+id);
   }
 
-  public listarConsultasService(id_cliente: String): Observable<any> {
-    const url = "http://localhost:8086/consultas?cliente=";
+  public listarConsultasClientePorIdService(id_cliente: String): Observable<any> {
+    const url = "http://localhost:8086/consultas/id?cliente=";
     return this.http.get<any>(url + id_cliente);
+  }
+
+  public listarConsultasClientePorCpfService(cpf_cliente: String): Observable<any> {
+    const url = "http://localhost:8086/consultas?cliente=";
+    return this.http.get<any>(url + cpf_cliente);
   }
 
   public criarConsultaService(id_cliente: String, consulta: Consulta): Observable<any> {

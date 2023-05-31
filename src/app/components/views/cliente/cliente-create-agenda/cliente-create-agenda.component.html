@@ -1,35 +1,34 @@
-
-<app-header></app-header>
-<app-footer></app-footer>
+<body>
+  <app-header></app-header>
+  <app-footer></app-footer>
 <h1></h1>
+<h1>Novo Agendamento</h1>
 <form>
-  <h2>Novo Agendamento</h2>
-
   <mat-form-field class="campo_maior">
-      <mat-label>Nome *</mat-label>
-      <input matInput [(ngModel)]="cliente.nome"
-      type="text"
-      name="nome" />
-    </mat-form-field>
+    <mat-label>Nome *</mat-label>
+    <input matInput [(ngModel)]="cliente.nome"
+    type="text"
+    name="nome" />
+  </mat-form-field>
 
-    <mat-form-field class="campo_menor">
-      <mat-label>Data *</mat-label>
-      <input
-        type="date" matInput [(ngModel)]="agenda.data"
-        name="data"/>
-    </mat-form-field>
+  <mat-form-field class="campo_menor">
+    <mat-label>Data *</mat-label>
+    <input
+    type="date" matInput [(ngModel)]="agenda.data"
+    name="data"/>
+  </mat-form-field>
 
-    <mat-form-field class="campo_menor">
-      <mat-label>Telefone *</mat-label>
-      <input type="tel" matInput [(ngModel)]="cliente.telefone"
-        type="tel"
-        name="telefone"
+  <mat-form-field class="campo_menor">
+    <mat-label>Telefone *</mat-label>
+    <input type="tel" maxlength="11" matInput [(ngModel)]="cliente.telefone"
+    type="tel"
+    name="telefone"
         placeholder="Ex: 99 99999-9999"/>
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
       <mat-label>Cpf </mat-label>
-      <input matInput [(ngModel)]="cliente.cpf"
+      <input matInput maxlength="11" [(ngModel)]="cliente.cpf"
       type="text"
       name="cpf"
       placeholder="Ex: 12345678901"/>
@@ -45,8 +44,9 @@
     </mat-form-field>
 
     <div class="buttons">
-      <!-- Botao criar Categoria -->
+
       <button (click)="criarAgendamento()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>
       <button (click)="navegarParaListaAgenda()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
     </div>
   </form>
+</body>

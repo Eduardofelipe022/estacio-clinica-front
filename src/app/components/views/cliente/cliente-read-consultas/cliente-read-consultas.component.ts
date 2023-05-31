@@ -30,7 +30,7 @@ export class ClienteReadConsultasComponent implements OnInit {
   }
 
   public listarConsultas() {
-    this.service.listarConsultasService(this.id_cliente).subscribe((resposta) => {
+    this.service.listarConsultasClientePorIdService(this.id_cliente).subscribe((resposta) => {
     this.consultas = resposta;
     this.serviseCli.buscarPorId(this.id_cliente).subscribe((reposta) => {
       this.nome = reposta.nome;

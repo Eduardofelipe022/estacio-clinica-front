@@ -16,7 +16,8 @@ export class ClienteReadComponent implements OnInit {
     'nome',
     'cpf',
     'dataNascimento',
-    'consultas',
+    'idade',
+    'telefone',
     'acoes',
   ];
   clientes: Cliente[] = [];

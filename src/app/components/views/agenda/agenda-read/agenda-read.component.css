@@ -1,28 +1,42 @@
 .content {
-    width: 80%;
-    margin: 1.4rem auto auto auto;
+  width: 80%;
+  margin: 1.4rem auto auto auto;
+}
+
+h1 {
+  text-align: center;
 }
 
 .mat-mdc-form-field {
   font-size: 14px;
-  margin-left: 5rem;
 }
 
 button {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .total {
-    margin-left: 26rem;
-    font-size: 1rem;
+  color: black;
+  margin-left: 60%;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
 
+.button_Opcoes {
+  margin-top: 15px;
+}
+
+.consultas {
+  color: rgba(196, 105, 31, 0.884);
 }
 
 .edit {
-  color:  blue;
-  margin-top: 10px;
+  color: blue;
 }
 
 
-
-
+body {
+  background-color: rgb(115, 186, 228);
+  background-size: cover;
+}

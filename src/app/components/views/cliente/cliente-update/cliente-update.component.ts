@@ -20,7 +20,8 @@ export class ClienteUpdateComponent implements OnInit{
     nomeMae: "",
     naturalidade:"",
     endereco: "",
-    cidade:""
+    cidade:"",
+    idade:''
   };
 
   constructor(
@@ -46,6 +47,7 @@ export class ClienteUpdateComponent implements OnInit{
       this.cliente.naturalidade = resposta.naturalidade;
       this.cliente.endereco = resposta.endereco;
       this.cliente.cidade = resposta.cidade;
+      this.cliente.idade = resposta.idade;
     });
   }
 

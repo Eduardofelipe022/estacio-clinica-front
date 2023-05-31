@@ -1,10 +1,10 @@
-<app-header></app-header>
-<app-footer></app-footer>
-<h1></h1>
-<form>
-  <h2>Atualizar Aluno</h2>
+<body>
+  <app-header></app-header>
+  <app-footer></app-footer>
+  <h1>Atualizar Aluno</h1>
+  <form>
 
-  <mat-form-field class="campo_menor">
+    <mat-form-field class="campo_menor">
     <mat-label>Matrícula *</mat-label>
     <input matInput [(ngModel)]="aluno.matricula"
     type="text"
@@ -20,7 +20,7 @@
 
   <mat-form-field class="campo_menor">
   <mat-label>Cpf *</mat-label>
-  <input matInput [(ngModel)]="aluno.cpf"
+  <input matInput maxlength="11" [(ngModel)]="aluno.cpf"
   type="text"
   name="cpf"
   placeholder="Ex: 12345678901"/>
@@ -52,26 +52,33 @@
   </mat-select>
 </mat-form-field>
 
-    <mat-form-field class="campo_maior">
-    <mat-label>Email *</mat-label>
-    <input type="email" matInput [(ngModel)]="aluno.email"
-    type="email"
-    name="email"
-    placeholder="Ex: clinica@yahoo.com"/>
-  </mat-form-field>
+<mat-form-field class="campo_maior">
+  <mat-label>Email *</mat-label>
+  <input type="email" matInput [(ngModel)]="aluno.email"
+  type="email"
+  name="email"
+  placeholder="Ex: clinica@yahoo.com"/>
+</mat-form-field>
 
-  <mat-form-field class="campo_menor">
-    <mat-label>Senha *</mat-label>
-    <input matInput [(ngModel)]="aluno.senha"
-    type="text"
-    name="senha"/>
-  </mat-form-field>
+<mat-form-field class="campo_menor">
+  <mat-label>Senha *</mat-label>
+  <input matInput [(ngModel)]="aluno.senha"
+  type="text"
+  name="senha"/>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Telefone</mat-label>
+  <input matInput maxlength="11" [(ngModel)]="aluno.telefone"
+  type="text"
+  name="telefone"/>
+</mat-form-field>
 
 
-  <div class="buttons">
-    <!-- Botao criar Categoria -->
+<div class="buttons">
     <button (click)="atualizarAluno()" class="mat-elevation-z8" mat-raised-button color="primary">Atualizar</button>
     <button (click)="navegarParaListaAlunos()" class="mat-elevation-z8" mat-raised-button color="warn">Cancelar</button>
   </div>
 </form>
+</body>
 

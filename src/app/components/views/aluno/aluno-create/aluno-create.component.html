@@ -1,26 +1,27 @@
-<app-header></app-header>
-<app-footer></app-footer>
-<h1></h1>
-<form>
-  <h2>Novo Aluno</h2>
+<body>
 
-  <mat-form-field class="campo_menor">
-    <mat-label>Matrícula *</mat-label>
-    <input matInput [(ngModel)]="aluno.matricula"
-    type="text"
-    name="matricula" />
-  </mat-form-field>
+  <app-header></app-header>
+  <app-footer></app-footer>
+  <h1>Novo Aluno</h1>
+  <form>
 
-  <mat-form-field class="campo_maior">
-    <mat-label>Nome *</mat-label>
-    <input matInput [(ngModel)]="aluno.nome"
-    type="text"
-    name="nome" />
-  </mat-form-field>
+    <mat-form-field class="campo_menor">
+      <mat-label>Matrícula *</mat-label>
+      <input matInput [(ngModel)]="aluno.matricula"
+      type="text"
+      name="matricula" />
+    </mat-form-field>
 
-  <mat-form-field class="campo_menor">
-  <mat-label>Cpf *</mat-label>
-  <input matInput [(ngModel)]="aluno.cpf"
+    <mat-form-field class="campo_maior">
+      <mat-label>Nome *</mat-label>
+      <input matInput [(ngModel)]="aluno.nome"
+      type="text"
+      name="nome" />
+    </mat-form-field>
+
+    <mat-form-field class="campo_menor">
+      <mat-label>Cpf *</mat-label>
+      <input matInput maxlength="11" [(ngModel)]="aluno.cpf"
   type="text"
   name="cpf"
   placeholder="Ex: 12345678901"/>
@@ -52,9 +53,9 @@
   </mat-select>
 </mat-form-field>
 
-    <mat-form-field class="campo_maior">
-    <mat-label>Email *</mat-label>
-    <input type="email" matInput [(ngModel)]="aluno.email"
+<mat-form-field class="campo_maior">
+  <mat-label>Email *</mat-label>
+  <input type="email" matInput [(ngModel)]="aluno.email"
     type="email"
     name="email"
     placeholder="Ex: clinica@yahoo.com"/>
@@ -67,6 +68,13 @@
     name="senha"/>
   </mat-form-field>
 
+  <mat-form-field class="campo_menor">
+    <mat-label>Telefone</mat-label>
+    <input matInput maxlength="11" [(ngModel)]="aluno.telefone"
+    type="text"
+    name="telefone"/>
+  </mat-form-field>
+
 
   <div class="buttons">
     <!-- Botao criar Categoria -->
@@ -74,4 +82,5 @@
     <button (click)="navegarParaListaAlunos()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
   </div>
 </form>
+</body>
 

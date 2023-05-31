@@ -1,9 +1,9 @@
-<app-header></app-header>
-<app-footer></app-footer>
-<h1></h1>
-<form>
-  <h2>Apagar Aluno</h2>
+<body>
+  <app-header></app-header>
+  <app-footer></app-footer>
+<h1>Apagar Aluno</h1>
 
+<form>
   <mat-form-field class="campo_menor">
     <mat-label>Matrícula</mat-label>
     <input matInput [(ngModel)]="aluno.matricula"
@@ -19,15 +19,15 @@
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
-  <mat-label>Cpf</mat-label>
-  <input matInput [(ngModel)]="aluno.cpf"
-  type="text"
-  name="cpf"
-  placeholder="Ex: 12345678901"/>
-</mat-form-field>
+    <mat-label>Cpf</mat-label>
+    <input matInput [(ngModel)]="aluno.cpf"
+    type="text"
+    name="cpf"
+    placeholder="Ex: 12345678901"/>
+  </mat-form-field>
 
-<mat-form-field class="campo_maior">
-  <mat-label>Endereço</mat-label>
+  <mat-form-field class="campo_maior">
+    <mat-label>Endereço</mat-label>
   <input
   matInput [(ngModel)]="aluno.endereco"
   type="text"
@@ -50,13 +50,13 @@
   placeholder=""/>
 </mat-form-field>
 
-    <mat-form-field class="campo_maior">
-    <mat-label>Email</mat-label>
-    <input type="email" matInput [(ngModel)]="aluno.email"
-    type="email"
-    name="email"
-    placeholder="Ex: clinica@yahoo.com"/>
-  </mat-form-field>
+<mat-form-field class="campo_maior">
+  <mat-label>Email</mat-label>
+  <input type="email" matInput [(ngModel)]="aluno.email"
+  type="email"
+  name="email"
+  placeholder="Ex: clinica@yahoo.com"/>
+</mat-form-field>
 
   <mat-form-field class="campo_menor">
     <mat-label>Senha</mat-label>
@@ -65,10 +65,17 @@
     name="senha"/>
   </mat-form-field>
 
+  <mat-form-field class="campo_menor">
+    <mat-label>Telefone</mat-label>
+    <input matInput [(ngModel)]="aluno.telefone"
+    type="text"
+    name="telefone"/>
+  </mat-form-field>
+
 
   <div class="buttons">
-    <!-- Botao criar Categoria -->
     <button (click)="deletarAluno()" class="mat-elevation-z8" mat-raised-button color="warn">Deletar</button>
     <button (click)="navegarParaListaAlunos()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
   </div>
 </form>
+</body>

@@ -18,7 +18,8 @@ export class AlunoDeleteComponent implements OnInit {
     endereco: "",
     email: "",
     senha: "",
-    curso: ""
+    curso: "",
+    telefone:''
     };
 
   constructor(private service: AlunoService, private route: ActivatedRoute, private router: Router){

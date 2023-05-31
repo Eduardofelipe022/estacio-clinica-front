@@ -22,7 +22,8 @@ export class UsuarioUpdateComponent implements OnInit{
     cpf: "",
     endereco: "",
     email: "",
-    senha: ""
+    senha: "",
+    telefone:''
     };
 
   tipos: TipoPerfil[] = [
@@ -50,6 +51,7 @@ export class UsuarioUpdateComponent implements OnInit{
       this.usuario.endereco = resposta.endereco;
       this.usuario.email = resposta.email;
       this.usuario.senha = resposta.senha;
+      this.usuario.telefone = resposta.telefone;
     });
   }
 

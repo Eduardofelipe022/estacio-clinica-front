@@ -1,9 +1,9 @@
-<app-header></app-header>
-<app-footer></app-footer>
-<h1></h1>
-<form>
-  <h2>Deletar Paciente</h2>
-  <mat-form-field class="campo_maior">
+<body>
+  <app-header></app-header>
+  <app-footer></app-footer>
+  <h1>Deletar Paciente</h1>
+  <form>
+    <mat-form-field class="campo_maior">
       <mat-label>Nome *</mat-label>
       <input matInput [(ngModel)]="cliente.nome"
       type="text"
@@ -13,16 +13,16 @@
     <mat-form-field class="campo_menor">
       <mat-label>Data de Nascimento</mat-label>
       <input
-        type="date" matInput [(ngModel)]="cliente.dataNascimento"
-        type="date"
+      type="date" matInput [(ngModel)]="cliente.dataNascimento"
+      type="date"
         name="dataNascimento" disabled/>
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
       <mat-label>Naturalidade *</mat-label>
       <input matInput [(ngModel)]="cliente.naturalidade"
-        type="text"
-        name="naturalidade" disabled/>
+      type="text"
+      name="naturalidade" disabled/>
     </mat-form-field>
 
     <mat-form-field class="campo_maior">
@@ -31,9 +31,9 @@
         matInput [(ngModel)]="cliente.endereco"
         type="text"
         name="endereco" disabled/>
-    </mat-form-field>
+      </mat-form-field>
 
-    <mat-form-field class="campo_menor">
+      <mat-form-field class="campo_menor">
       <mat-label>Cidade *</mat-label>
       <input matInput [(ngModel)]="cliente.cidade"
       type="text"
@@ -46,9 +46,9 @@
         type="tel"
         name="telefone"
         placeholder="Ex: 99 99999-9999" disabled/>
-    </mat-form-field>
+      </mat-form-field>
 
-    <mat-form-field class="campo_maior">
+      <mat-form-field class="campo_maior">
       <mat-label>Nome da Mãe *</mat-label>
       <input matInput [(ngModel)]="cliente.nomeMae"
       type="text"
@@ -66,9 +66,9 @@
     <mat-form-field class="campo_maior">
       <mat-label>Email *</mat-label>
       <input type="email" matInput [(ngModel)]="cliente.email"
-        type="email"
-        name="email"
-        placeholder="Ex: clinica@yahoo.com" disabled/>
+      type="email"
+      name="email"
+      placeholder="Ex: clinica@yahoo.com" disabled/>
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
@@ -84,3 +84,4 @@
       <button (click)="navegarParaListaClientes()" class="mat-elevation-z8" mat-raised-button color="primary">CANCELAR</button>
     </div>
   </form>
+</body>

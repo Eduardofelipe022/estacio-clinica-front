@@ -1,14 +1,27 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Cliente } from "../cliente.modelo";
 import { ClienteService } from "../cliente.service";
+
+interface Sexo {
+  valor: string;
+  viewValor: string;
+}
 
 @Component({
   selector: "app-cliente-create",
   templateUrl: "./cliente-create.component.html",
   styleUrls: ["./cliente-create.component.css"],
 })
-export class ClienteCreateComponent {
+export class ClienteCreateComponent implements OnInit{
+
+  tipoSexo: Sexo[] = [
+    { valor: 'Masculino', viewValor: 'Masculino' },
+    { valor: 'Feminino', viewValor: 'Feminino' },
+    { valor: 'Prefiro não dizer', viewValor: 'Prefiro não dizer' },
+    { valor: 'Outros', viewValor: 'Outros' },
+  ];
+
   cliente: Cliente = {
     nome: "",
     dataNascimento: "",
@@ -19,7 +32,8 @@ export class ClienteCreateComponent {
     nomeMae: "",
     naturalidade:"",
     endereco: "",
-    cidade:""
+    cidade:"",
+    idade:""
   };
 
   constructor(private service: ClienteService, private router: Router) {}

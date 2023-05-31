@@ -1,22 +1,16 @@
 img {
-  height: 10rem;
-  width: 55rem;
+  height: 70px;
+  width: 70px;
 }
 
 .header {
-  justify-content: center;
-  height: 10%;
+  display: flex;
+  justify-content: space-between;
 }
 
 span {
   display: flex;
   align-items: center;
-}
-
-.menu {
-  position: absolute;
-  margin-bottom: 0.2rem;
-  right: 10px;
 }
 
 .material-icons {
@@ -25,8 +19,28 @@ span {
 
 .iconeMenu {
   color: blue;
+
 }
 
 .iconeSetting{
   color: black;
+
+}
+
+.text{
+  font-size: 2rem;
+  padding-left: 1%;
+  text-align: center;
+  font-family: Poppins,sans-serif;
+  font-weight: bold;
+
+}
+
+
+
+
+.icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

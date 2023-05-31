@@ -15,6 +15,11 @@ export class EspecialidadReadComponent implements OnInit{
     "delete"
   ];
 
+  especialidadeCreate: Especialidade = {
+    valor: '',
+    verValor: '',
+  };
+
   especialidade: Especialidade[] = [];
 
   constructor(private service: EspecialidadeService, private router: Router) {}
@@ -32,4 +37,26 @@ export class EspecialidadReadComponent implements OnInit{
   public navegarParaEspecialidadeCreate() {
     this.router.navigate(["especialidade/create"]);
   }
+
+  public criarEspecialidade(): void {
+    this.especialidadeCreate.verValor = this.especialidadeCreate.valor;
+    this.service.criarEspecialidadeService(this.especialidadeCreate).subscribe(
+      (resposta) => {
+        this.service.mensagem('Especialidade adicionado com sucesso!');
+        location.reload();
+      },
+      (err) => {
+        for (let i = 0; i < err.error.errors.length; i++) {
+          this.service.mensagem('Campo Obrigatório!');
+        }
+      }
+    );
+  }
+  public deletarEspecialidade(id: any): void {
+    this.service.deleteEspecialidadeService(id).subscribe((reposta) => {
+      this.service.mensagem("Especialidade Deletada com Sucesso!");
+      location.reload();
+    });
+  }
+
 }

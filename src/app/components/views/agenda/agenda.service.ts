@@ -11,11 +11,17 @@ export class AgendaService {
   constructor(private http: HttpClient, private _snack: MatSnackBar) {}
 
   public listarAgendasService(): Observable<any> {
-    return this.http.get('http://localhost:8086/agenda');
+    return this.http.get('http://localhost:8086/agenda/todas');
   }
 
-  public criarAgendaService(agenda: Agenda): Observable<Agenda> {
-    return this.http.post<Agenda>('http://localhost:8086/agenda', agenda);
+  public listarAgendasServicePorCliente(id_cliente: String): Observable<any> {
+    const url = "http://localhost:8086/agenda?cliente=";
+    return this.http.get<any>(url + id_cliente);
+  }
+
+  public criarAgendaService(id_cliente: String, agenda: Agenda): Observable<any> {
+    const url = "http://localhost:8086/agenda?cliente=";
+    return this.http.post<any>(url + id_cliente, agenda);
   }
 
   public buscarPorId(id: String): Observable<Agenda> {

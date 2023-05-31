@@ -17,7 +17,7 @@ export class UsuarioReadComponent implements OnInit{
     'nome',
     'cpf',
     'tipoPerfil',
-    'senha',
+    'telefone',
     'acoes',
   ];
 
@@ -37,6 +37,10 @@ export class UsuarioReadComponent implements OnInit{
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  public navegarParaAlunoCreate() {
+    this.router.navigate(['alunos/create']);
   }
 
   public navegarParaUsuarioCreate() {

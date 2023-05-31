@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UsuarioService } from '../usuario/usuario.service';
+import { Usuario } from '../usuario/usuario.modelo';
 
 @Component({
   selector: 'app-login',
@@ -11,10 +12,13 @@ export class LoginComponent implements OnInit {
 
   email!: string;
   senha!: string;
+  usuario!: Usuario;
+  id!: string | undefined;
 
   constructor(
     private router: Router,
-    public service: UsuarioService
+    public service: UsuarioService,
+
   ) {}
 
   ngOnInit(): void {
@@ -24,18 +28,19 @@ export class LoginComponent implements OnInit {
   submitLogin() {
     this.service.buscarPorSenha(this.senha).subscribe(
       (resposta) => {
-        let usuario = resposta;
-        console.log(usuario);
-        if (usuario.tipoPerfil === 'ADMIN' && usuario.email === this.email) {
+        this.usuario = resposta;
+        if (this.usuario.tipoPerfil === 'ADMIN' && this.usuario.email === this.email) {
           this.router.navigate(['/home']);
-        } else if (usuario.tipoPerfil === 'ALUNO' && usuario.email === this.email) {
+        } else if (this.usuario.tipoPerfil === 'ALUNO' && this.usuario.email === this.email) {
           this.router.navigate(['/alunos']);
-        } else if (usuario.tipoPerfil === 'RECEPCIONISTA' && usuario.email === this.email) {
+        } else if (this.usuario.tipoPerfil === 'RECEPCIONISTA' && this.usuario.email === this.email) {
           this.router.navigate(['/usuarios']);
         }
       },
-      (_err) => {
-        this.service.mensagem('Usuário não encontrado!');
+      (err) => {
+        for (let i = 0; i < err.error.errors.length; i++) {
+          this.service.mensagem('Usuário não encontrado!');
+        }
       }
     );
   }

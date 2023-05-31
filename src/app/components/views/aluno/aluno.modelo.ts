@@ -8,4 +8,5 @@ export interface Aluno {
   email: string;
   senha: string;
   curso: string;
+  telefone: string
 }

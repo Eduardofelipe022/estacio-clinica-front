@@ -23,6 +23,7 @@ export class UsuarioCreateComponent implements OnInit {
     endereco: '',
     email: '',
     senha: '',
+    telefone:''
   };
 
   tipos: TipoPerfil[] = [

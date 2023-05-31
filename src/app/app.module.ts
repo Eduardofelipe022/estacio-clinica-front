@@ -27,7 +27,6 @@ import { HomeComponent } from './components/views/home/home.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { AgendaCreateComponent } from './components/views/agenda/agenda-create/agenda-create.component';
 import { AgendaReadComponent } from './components/views/agenda/agenda-read/agenda-read.component';
 import { ClienteCreateComponent } from './components/views/cliente/cliente-create/cliente-create.component';
 import { ClienteDeleteComponent } from './components/views/cliente/cliente-delete/cliente-delete.component';
@@ -40,11 +39,7 @@ import { ClienteConsultaDetalhadaComponent } from './components/views/cliente/cl
 import { LoginComponent } from './components/views/login/login.component';
 import { AgendaUpdateComponent } from './components/views/agenda/agenda-update/agenda-update.component';
 import { FilaReadComponent } from './components/views/fila/fila-read/fila-read.component';
-import { CreateComponent } from './components/views/fila/create/create.component';
-import { DeleteComponent } from './components/views/fila/delete/delete.component';
 import { ClienteCreateAgendaComponent } from './components/views/cliente/cliente-create-agenda/cliente-create-agenda.component';
-import { EspecialidadeCreateComponent } from './components/views/especialidade/especialidade-create/especialidade-create.component';
-import { EspecialidadeDeleteComponent } from './components/views/especialidade/especialidade-delete/especialidade-delete.component';
 import { EspecialidadReadComponent } from './components/views/especialidade/especialidad-read/especialidad-read.component';
 import { AlunoCreateComponent } from './components/views/aluno/aluno-create/aluno-create.component';
 import { AlunoDeleteComponent } from './components/views/aluno/aluno-delete/aluno-delete.component';
@@ -68,18 +63,13 @@ import {MatRadioModule} from '@angular/material/radio';
     ClienteCreateComponent,
     ClienteUpdateComponent,
     ConsultaCreateComponent,
-    AgendaCreateComponent,
     AgendaReadComponent,
     ClienteReadConsultasComponent,
     ClienteConsultaDetalhadaComponent,
     LoginComponent,
     AgendaUpdateComponent,
     FilaReadComponent,
-    CreateComponent,
-    DeleteComponent,
     ClienteCreateAgendaComponent,
-    EspecialidadeCreateComponent,
-    EspecialidadeDeleteComponent,
     EspecialidadReadComponent,
     AlunoCreateComponent,
     AlunoDeleteComponent,

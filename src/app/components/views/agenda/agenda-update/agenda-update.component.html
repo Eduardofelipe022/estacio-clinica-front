@@ -1,45 +1,43 @@
-<app-header></app-header>
-<app-footer></app-footer>
-<h1></h1>
+<body>
+  <app-header></app-header>
+  <app-footer></app-footer>
+  <h1>Atualizar Agendamento</h1>
 <form>
-  <h2>Atualizar Agendamento</h2>
   <mat-form-field class="campo_maior">
-    <mat-label>Nome *</mat-label>
-    <input matInput [(ngModel)]="agenda.nome" type="text" name="nome" />
+    <mat-label>Nome do Paciente</mat-label>
+    <input matInput [(ngModel)]="agenda.nome" type="text" name="nome" disabled/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
-    <mat-label>Data *</mat-label>
+    <mat-label>Data do Atendimento</mat-label>
     <input
-      type="date"
-      matInput
-      [(ngModel)]="agenda.data"
-      type="date"
-      name="data"
-    />
+    type="date"
+    matInput
+    [(ngModel)]="agenda.data"
+    type="date"
+    name="data"
+    disabled/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
-    <mat-label>Telefone *</mat-label>
+    <mat-label>Telefone</mat-label>
     <input
-      type="tel"
-      matInput
-      [(ngModel)]="agenda.fone"
-      type="tel"
-      name="telefone"
-      placeholder="Ex: 99 99999-9999"
-    />
+    type="tel"
+    matInput maxlength="11"
+    [(ngModel)]="agenda.fone"
+    type="tel"
+    name="telefone"
+    disabled/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
-    <mat-label>Cpf </mat-label>
+    <mat-label>CPF</mat-label>
     <input
-      matInput
-      [(ngModel)]="agenda.cpf"
-      type="text"
-      name="cpf"
-      placeholder="Ex: 12345678901"
-    />
+    matInput maxlength="11"
+    [(ngModel)]="agenda.cpf"
+    type="text"
+    name="cpf"
+    disabled/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
@@ -59,32 +57,26 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
-  <div>
-    <mat-radio-group
-      aria-label="Select an option"
-      [(ngModel)]="agenda.presenca">
-      <mat-radio-button [(ngModel)]="atividadeFixa" [value]="true">Presença</mat-radio-button>
-    </mat-radio-group>
-  </div>
 
   <div class="buttons">
-    <!-- Botao criar Categoria -->
+
     <button
-      (click)="atualizarAgenda()"
-      class="mat-elevation-z8"
-      mat-raised-button
-      color="primary"
+    (click)="atualizarAgenda()"
+    class="mat-elevation-z8"
+    mat-raised-button
+    color="primary"
     >
-      ATUALIZAR
-    </button>
-    <button
-      (click)="navegarParaAgenda()"
+    ATUALIZAR
+  </button>
+  <button
+  (click)="navegarParaAgenda()"
       class="mat-elevation-z8"
       mat-raised-button
       color="warn"
-    >
+      >
       CANCELAR
     </button>
   </div>
 </form>
+</body>
 
