@@ -21,7 +21,7 @@ export class ClienteDeleteComponent implements OnInit{
     naturalidade:"",
     endereco: "",
     cidade:"",
-    idade:''
+    bairro:''
   };
 
   constructor(private service: ClienteService, private route: ActivatedRoute, private router: Router){

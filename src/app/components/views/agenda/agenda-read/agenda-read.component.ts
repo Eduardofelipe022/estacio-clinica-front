@@ -55,8 +55,8 @@ export class AgendaReadComponent implements OnInit {
       this.qtdAgendadas = resposta;
     });
   }
-  onClick(): void {
-    this.serviceCliente.buscarPorCpf(this.cpf).subscribe((resposta) => {
+   public consultas(cpf: any): void {
+    this.serviceCliente.buscarPorCpf(cpf).subscribe((resposta) => {
       this.cliente = resposta;
      if(this.cliente != null){
        this.router.navigate(['clientes/' + this.cliente.id + '/consultas']);

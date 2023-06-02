@@ -33,7 +33,7 @@ export class ClienteCreateComponent implements OnInit{
     naturalidade:"",
     endereco: "",
     cidade:"",
-    idade:""
+    bairro:""
   };
 
   constructor(private service: ClienteService, private router: Router) {}

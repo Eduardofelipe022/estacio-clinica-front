@@ -7,8 +7,10 @@
     <button class="mat-elevation-z8" mat-button [matMenuTriggerFor]="menu" mat-raised-button color="primary">Novo Usuário</button>
     <mat-menu #menu="matMenu">
       <button (click)="navegarParaAlunoCreate()" mat-menu-item>Aluno</button>
-      <button (click)="navegarParaUsuarioCreate()" mat-menu-item>Admin</button>
+      <button (click)="navegarParaUsuarioCreate()" mat-menu-item>Usuário</button>
     </mat-menu>
+
+    <button class="button_Aluno" routerLink="/alunos" mat-raised-button color="primary">Alunos</button>
     <mat-form-field>
       <mat-label>Filtro</mat-label>
       <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
@@ -59,7 +61,7 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 
         <tr class="mat-row" *matNoDataRow>
-          <td class="mat-cell" colspan="4">Nenhum Aluno Encontrado: "{{input.value}}"</td>
+          <td class="mat-cell" colspan="4">Nenhum Usuário Encontrado: "{{input.value}}"</td>
         </tr>
       </table>
       <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]"

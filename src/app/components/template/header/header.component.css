@@ -6,6 +6,8 @@ img {
 .header {
   display: flex;
   justify-content: space-between;
+  box-shadow: 2px 3px 6px black;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
 span {
@@ -14,11 +16,11 @@ span {
 }
 
 .material-icons {
-  color: rgba(0, 0, 252, 0.836);
+  color: black;
 }
 
 .iconeMenu {
-  color: blue;
+  color: black
 
 }
 
@@ -37,6 +39,9 @@ span {
 }
 
 
+.exit{
+  left: 2%;
+}
 
 
 .icons{

@@ -10,6 +10,7 @@ import { Usuario } from '../usuario/usuario.modelo';
 })
 export class LoginComponent implements OnInit {
 
+  hide = true;
   email!: string;
   senha!: string;
   usuario!: Usuario;

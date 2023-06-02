@@ -22,33 +22,34 @@ import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delet
 import { UsuarioCreateComponent } from './components/views/usuario/usuario-create/usuario-create.component';
 import { UsuarioReadComponent } from './components/views/usuario/usuario-read/usuario-read.component';
 import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
+import { CanActiveGuard } from './components/views/guard/can-active.guard';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: "home", component: HomeComponent },
-  { path: "clientes/consulta/:id_cliente/consultas/create", component: ConsultaCreateComponent },
-  { path: "clientes", component: ClienteReadComponent },
-  { path: "clientes/create", component: ClienteCreateComponent },
-  { path: "clientes/update/:id", component: ClienteUpdateComponent },
-  { path: "clientes/delete/:id", component: ClienteDeleteComponent },
-  { path: "clientes/:id_cliente/consultas", component: ClienteReadConsultasComponent },
-  { path: "clientes/:cpf/consultas", component: ClienteReadConsultasComponent },
-  { path: "clientes/:id_cliente/consultas/:id_consulta/consulta", component: ClienteConsultaDetalhadaComponent},
-  { path: "agenda", component: AgendaReadComponent },
-  { path: "agenda/update/:id" , component: AgendaUpdateComponent },
-  { path: "clientes/agenda/create/:id" , component: ClienteCreateAgendaComponent },
-  { path: "fila" , component: FilaReadComponent },
-  { path: "especialidade" , component: EspecialidadReadComponent },
-  { path: "alunos", component: AlunoReadComponent },
-  { path: "alunos/create", component: AlunoCreateComponent },
-  { path: "alunos/update/:id", component: AlunoUpdateComponent },
-  { path: "alunos/delete/:id", component: AlunoDeleteComponent },
-  { path: "usuarios", component: UsuarioReadComponent },
-  { path: "usuarios/create", component: UsuarioCreateComponent },
-  { path: "usuarios/update/:id", component: UsuarioUpdateComponent },
-  { path: "usuarios/delete/:id", component: UsuarioDeleteComponent },
+  { path: "home", component: HomeComponent , canActivate: [CanActiveGuard]},
+  { path: "clientes/consulta/:id_cliente/consultas/create", component: ConsultaCreateComponent, canActivate: [CanActiveGuard] },
+  { path: "clientes", component: ClienteReadComponent, canActivate: [CanActiveGuard] },
+  { path: "clientes/create", component: ClienteCreateComponent, canActivate: [CanActiveGuard] },
+  { path: "clientes/update/:id", component: ClienteUpdateComponent, canActivate: [CanActiveGuard] },
+  { path: "clientes/delete/:id", component: ClienteDeleteComponent, canActivate: [CanActiveGuard] },
+  { path: "clientes/:id_cliente/consultas", component: ClienteReadConsultasComponent, canActivate: [CanActiveGuard] },
+  { path: "clientes/:cpf/consultas", component: ClienteReadConsultasComponent, canActivate: [CanActiveGuard] },
+  { path: "clientes/:id_cliente/consultas/:id_consulta/consulta", component: ClienteConsultaDetalhadaComponent, canActivate: [CanActiveGuard]},
+  { path: "agenda", component: AgendaReadComponent, canActivate: [CanActiveGuard] },
+  { path: "agenda/update/:id" , component: AgendaUpdateComponent, canActivate: [CanActiveGuard] },
+  { path: "clientes/agenda/create/:id" , component: ClienteCreateAgendaComponent, canActivate: [CanActiveGuard] },
+  { path: "fila" , component: FilaReadComponent, canActivate: [CanActiveGuard] },
+  { path: "especialidade" , component: EspecialidadReadComponent, canActivate: [CanActiveGuard] },
+  { path: "alunos", component: AlunoReadComponent, canActivate: [CanActiveGuard] },
+  { path: "alunos/create", component: AlunoCreateComponent, canActivate: [CanActiveGuard] },
+  { path: "alunos/update/:id", component: AlunoUpdateComponent, canActivate: [CanActiveGuard] },
+  { path: "alunos/delete/:id", component: AlunoDeleteComponent, canActivate: [CanActiveGuard] },
+  { path: "usuarios", component: UsuarioReadComponent, canActivate: [CanActiveGuard] },
+  { path: "usuarios/create", component: UsuarioCreateComponent, canActivate: [CanActiveGuard] },
+  { path: "usuarios/update/:id", component: UsuarioUpdateComponent, canActivate: [CanActiveGuard] },
+  { path: "usuarios/delete/:id", component: UsuarioDeleteComponent, canActivate: [CanActiveGuard] },
   { path: '**', component: LoginComponent }
 
 ];

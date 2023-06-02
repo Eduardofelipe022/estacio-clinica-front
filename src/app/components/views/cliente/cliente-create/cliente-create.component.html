@@ -56,8 +56,7 @@
 
   <mat-form-field class="campo_menor">
     <mat-label>CPF</mat-label>
-    <input matInput maxlength="11" [(ngModel)]="cliente.cpf"
-    type="text"
+    <input matInput #input maxlength="11" type="tel" [(ngModel)]="cliente.cpf"
     name="cpf"
     placeholder="Ex: 12345678901" required/>
   </mat-form-field>

@@ -52,7 +52,7 @@
 
                  <button class="button_Opcoes no-print" mat-button [matMenuTriggerFor]="menu" mat-raised-button color="primary">Opções</button>
                  <mat-menu #menu="matMenu">
-                    <button class="consultas" (click)="onClick()" mat-menu-item><mat-icon class="consultas">folder_copy</mat-icon> Consultas</button>
+                    <button class="consultas" (click)="consultas( row.cpf )" mat-menu-item><mat-icon class="consultas">folder_copy</mat-icon> Consultas</button>
                     <button routerLink="update/{{ row.id }}" mat-menu-item><mat-icon class="edit">edit</mat-icon> Atualização</button>
                   </mat-menu>
                 </td>
@@ -66,9 +66,7 @@
                 <td class="mat-cell " colspan="4">Nenhum Agendamento Encontrado: "{{input.value}}"</td>
               </tr>
        </table>
-
-
-            <mat-paginator class="paginador no-print" [pageSizeOptions]="[5, 10, 20, 50]"
+        <mat-paginator class="paginador no-print" [pageSizeOptions]="[5, 10, 20, 50]"
             showFirstLastButtons
             aria-label="Select page of periodic elements">
           </mat-paginator>

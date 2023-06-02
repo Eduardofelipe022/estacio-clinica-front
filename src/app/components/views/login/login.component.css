@@ -46,3 +46,7 @@ body {
 background-image: url("src/assets/imagem/3.jpg");
 background-size: cover;
 }
+
+.buttonVisibilidadeSenha{
+  color: black;
+}

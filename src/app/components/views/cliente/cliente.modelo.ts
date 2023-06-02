@@ -10,5 +10,5 @@ export interface Cliente {
   naturalidade: String
   endereco: String
   cidade: String
-  idade: string
+  bairro: string
 }
