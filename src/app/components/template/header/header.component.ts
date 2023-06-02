@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UsuarioService } from '../../views/usuario/usuario.service';
+import { LoginComponent } from '../../views/login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,9 @@ import { UsuarioService } from '../../views/usuario/usuario.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  usu!: LoginComponent;
+  nome!:string;
+  constructor(private route: ActivatedRoute, public service: UsuarioService,) {
 
   private id ='1';
   nome: String = '';
