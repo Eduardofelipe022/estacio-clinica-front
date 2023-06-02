@@ -7,20 +7,20 @@
     <mat-label>Matrícula</mat-label>
     <input matInput [(ngModel)]="usuario.matricula"
     type="text"
-    name="matricula" required/>
+    name="matricula" required placeholder="Digite sua matricula">
   </mat-form-field>
 
   <mat-form-field class="campo_maior">
-    <mat-label>Nome</mat-label>
+    <mat-label>Nome completo</mat-label>
     <input matInput [(ngModel)]="usuario.nome"
     type="text"
-    name="nome" required/>
+    name="nome" required placeholder="Digite seu nome">
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
     <mat-label>CPF</mat-label>
   <input matInput maxlength="11" [(ngModel)]="usuario.cpf"
-  type="text"
+  type="number"
   name="cpf"
   placeholder="Ex: 12345678901" required/>
 </mat-form-field>
@@ -30,7 +30,7 @@
   <input
   matInput [(ngModel)]="usuario.endereco"
   type="text"
-  name="endereco" required/>
+  name="endereco" required placeholder="Rua, bairro e Cidade">
 </mat-form-field>
 
 <mat-form-field class="campo_menor">
@@ -43,25 +43,25 @@
 </mat-form-field>
 
 <mat-form-field class="campo_maior">
-    <mat-label>Email</mat-label>
+    <mat-label>E-mail</mat-label>
     <input type="email" matInput [(ngModel)]="usuario.email"
     type="email"
     name="email"
-    placeholder="Ex: clinica@yahoo.com" required/>
+    placeholder="Ex: clinica@estacio.com" required/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
     <mat-label>Senha</mat-label>
     <input matInput [(ngModel)]="usuario.senha"
     type="password"
-    name="senha" required/>
+    name="senha" required>
   </mat-form-field>
 
   <mat-form-field class="campo_maior">
     <mat-label>Telefone</mat-label>
     <input type="fone" matInput maxlength="11" [(ngModel)]="usuario.telefone"
     name="telefone"
-    placeholder="Ex: clinica@yahoo.com" required/>
+    placeholder="(xx) xxxxx-xxxx" required/>
   </mat-form-field>
 
 
