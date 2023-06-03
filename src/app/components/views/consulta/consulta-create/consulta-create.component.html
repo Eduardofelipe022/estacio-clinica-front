@@ -6,6 +6,14 @@
   <div>
     <p>Nome do Paciente: {{ nome }}</p>
   </div>
+    
+    <mat-form-field class="campo_maior">
+      <mat-label>Nome da Atendente</mat-label>
+      <input matInput [(ngModel)]="consulta.nomeAtendente"
+      type="text"
+      name="nomeAtendente" required>
+    </mat-form-field>
+
     <mat-form-field class="campo_menor">
       <mat-label>Matrícula</mat-label>
       <input matInput [(ngModel)]="consulta.matricula"
@@ -13,22 +21,15 @@
       name="matricula" required>
     </mat-form-field>
 
-    <mat-form-field class="campo_maior">
-      <mat-label>Nome Atendente</mat-label>
-      <input matInput [(ngModel)]="consulta.nomeAtendente"
-      type="text"
-      name="nomeAtendente" required>
-    </mat-form-field>
-
     <mat-form-field class="data">
-          <mat-label>Data Consulta</mat-label>
+          <mat-label>Data da Consulta</mat-label>
           <input matInput [(ngModel)]="consulta.dataConsulta"
           type="date"
           name="dataConsulta"required>
         </mat-form-field>
 
         <mat-form-field class="campo_textarea">
-            <mat-label>Queixas</mat-label>
+            <mat-label>Diagnostico</mat-label>
             <textarea matInput [(ngModel)]="consulta.queixas"
             type="text"
             name="queixas"
@@ -36,7 +37,7 @@
           </mat-form-field>
 
           <mat-form-field class="campo_textarea">
-            <mat-label>Plano</mat-label>
+            <mat-label>Medicação</mat-label>
             <textarea matInput [(ngModel)]="consulta.plano"
             type="text"
               name="plano"

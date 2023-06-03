@@ -4,18 +4,18 @@
   <h1>Atualizar Aluno</h1>
   <form>
 
+    <mat-form-field class="campo_maior">
+      <mat-label>Nome completo</mat-label>
+      <input matInput [(ngModel)]="aluno.nome"
+      type="text"
+      name="nome" required placeholder="Digite su nome">
+    </mat-form-field>
+
     <mat-form-field class="campo_menor">
     <mat-label>Matrícula</mat-label>
     <input matInput [(ngModel)]="aluno.matricula"
     type="text"
-    name="matricula" required/>
-  </mat-form-field>
-
-  <mat-form-field class="campo_maior">
-    <mat-label>Nome</mat-label>
-    <input matInput [(ngModel)]="aluno.nome"
-    type="text"
-    name="nome" required/>
+    name="matricula" required placeholder="Digite sua matricula">
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
@@ -31,7 +31,7 @@
   <input
   matInput [(ngModel)]="aluno.endereco"
   type="text"
-  name="endereco"required>
+  name="endereco"required placeholder="Rua, bairro e Cidade">
 </mat-form-field>
 
 <mat-form-field class="campo_menor">
@@ -71,7 +71,7 @@
   <mat-label>Telefone</mat-label>
   <input matInput maxlength="11" [(ngModel)]="aluno.telefone"
   type="text"
-  name="telefone" required>
+  name="telefone" required placeholder="(xx) xxxxx-xxxx">
 </mat-form-field>
 
 

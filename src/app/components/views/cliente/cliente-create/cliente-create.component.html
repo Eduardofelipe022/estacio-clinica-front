@@ -7,7 +7,7 @@
     <mat-label>Nome Completo</mat-label>
     <input matInput [(ngModel)]="cliente.nome"
     type="text"
-    name="nome" required/>
+    name="nome" required placeholder="Digite seu nome">
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
@@ -30,7 +30,14 @@
     <input
     matInput [(ngModel)]="cliente.endereco"
     type="text"
-    name="endereco" required/>
+    name="endereco" required placeholder="Rua tal e nº tal">
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Bairro</mat-label>
+    <input matInput [(ngModel)]="cliente.bairro"
+    type="text"
+    name="bairro" required/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
@@ -40,19 +47,19 @@
     name="cidade" required/>
   </mat-form-field>
 
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome completo da Mãe</mat-label>
+    <input matInput [(ngModel)]="cliente.nomeMae"
+    type="text"
+    name="nomeMae" required/>
+  </mat-form-field>
+
   <mat-form-field class="campo_menor">
     <mat-label>Telefone</mat-label>
     <input type="tel" maxlength="11" matInput [(ngModel)]="cliente.telefone"
     type="tel"
     name="telefone"
-    placeholder="Ex: 99 99999-9999" required/>
-  </mat-form-field>
-
-  <mat-form-field class="campo_maior">
-    <mat-label>Nome da Mãe</mat-label>
-    <input matInput [(ngModel)]="cliente.nomeMae"
-    type="text"
-    name="nomeMae" required/>
+    placeholder="(xx) xxxxx-xxxx" required>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
@@ -60,13 +67,6 @@
     <input matInput #input maxlength="11" type="tel" [(ngModel)]="cliente.cpf"
     name="cpf"
     placeholder="Ex: 12345678901" required/>
-  </mat-form-field>
-
-  <mat-form-field class="campo_menor">
-    <mat-label>Bairro</mat-label>
-    <input matInput [(ngModel)]="cliente.bairro"
-    type="text"
-    name="bairro" required/>
   </mat-form-field>
 
   <mat-form-field class="campo_maior">

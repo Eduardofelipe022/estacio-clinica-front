@@ -3,34 +3,57 @@
   <app-footer></app-footer>
   <h1>Novo Usuário</h1>
 <form>
+
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome Completo</mat-label>
+    <input matInput [(ngModel)]="usuario.nome"
+    type="text"
+    name="nome" required placeholder="Digite seu nome">
+  </mat-form-field>
+  
   <mat-form-field class="campo_menor">
     <mat-label>Matrícula</mat-label>
     <input matInput [(ngModel)]="usuario.matricula"
     type="text"
-    name="matricula" required/>
+    name="matricula" required placeholder="Digite sua matricula">
   </mat-form-field>
-
-  <mat-form-field class="campo_maior">
-    <mat-label>Nome</mat-label>
-    <input matInput [(ngModel)]="usuario.nome"
-    type="text"
-    name="nome" required/>
-  </mat-form-field>
-
-  <mat-form-field class="campo_menor">
-    <mat-label>CPF</mat-label>
-  <input matInput maxlength="11" [(ngModel)]="usuario.cpf"
-  type="text"
-  name="cpf"
-  placeholder="Ex: 12345678901" required/>
-</mat-form-field>
 
 <mat-form-field class="campo_maior">
   <mat-label>Endereço</mat-label>
   <input
   matInput [(ngModel)]="usuario.endereco"
   type="text"
-  name="endereco" required/>
+  name="endereco" required placeholder="Rua, bairro e Cidade">
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Telefone</mat-label>
+  <input type="fone" matInput maxlength="11" [(ngModel)]="usuario.telefone"
+  name="telefone"
+  placeholder="(xx) xxxxx-xxxx" required/>
+</mat-form-field>
+
+<mat-form-field class="campo_maior">
+  <mat-label>E-mail</mat-label>
+  <input type="email" matInput [(ngModel)]="usuario.email"
+  type="email"
+  name="email"
+  placeholder="Ex: clinica@estacio.com" required/>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>CPF</mat-label>
+<input matInput maxlength="11" [(ngModel)]="usuario.cpf"
+type="tel"
+name="cpf"
+placeholder="Ex: 12345678901" required/>
+</mat-form-field>
+
+<mat-form-field class="campo_maior">
+  <mat-label>Senha</mat-label>
+  <input matInput [(ngModel)]="usuario.senha"
+  type="password"
+  name="senha" required/>
 </mat-form-field>
 
 <mat-form-field class="campo_menor">
@@ -41,28 +64,6 @@
     </mat-option>
   </mat-select>
 </mat-form-field>
-
-<mat-form-field class="campo_maior">
-    <mat-label>Email</mat-label>
-    <input type="email" matInput [(ngModel)]="usuario.email"
-    type="email"
-    name="email"
-    placeholder="Ex: clinica@yahoo.com" required/>
-  </mat-form-field>
-
-  <mat-form-field class="campo_menor">
-    <mat-label>Senha</mat-label>
-    <input matInput [(ngModel)]="usuario.senha"
-    type="password"
-    name="senha" required/>
-  </mat-form-field>
-
-  <mat-form-field class="campo_maior">
-    <mat-label>Telefone</mat-label>
-    <input type="fone" matInput maxlength="11" [(ngModel)]="usuario.telefone"
-    name="telefone"
-    placeholder="Ex: clinica@yahoo.com" required/>
-  </mat-form-field>
 
 
   <div class="buttons">
