@@ -1,11 +1,11 @@
-import { EspecialidadeService } from './../../especialidade/especialidade.service';
+import { EspecialidadeService } from '../../../services/especialidade.service';
 import { Component } from '@angular/core';
-import { Agenda } from '../agenda.modelo';
-import { AgendaService } from '../agenda.service';
+import { Agenda } from '../../../models/agenda.modelo';
+import { AgendaService } from '../../../services/agenda.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Especialidade } from '../../especialidade/especialidade.modelo';
-import { Aluno } from '../../aluno/aluno.modelo';
-import { AlunoService } from '../../aluno/service.service';
+import { Especialidade } from '../../../models/especialidade.modelo';
+import { Aluno } from '../../../models/aluno.modelo';
+import { AlunoService } from '../../../services/service.service';
 
 @Component({
   selector: 'app-agenda-update',

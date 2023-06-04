@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Fila } from '../fila.modelo';
-import { FilaService } from '../fila.service';
+import { Fila } from '../../../models/fila.modelo';
+import { FilaService } from '../../../services/fila.service';
 
 @Component({
   selector: 'app-fila-read',

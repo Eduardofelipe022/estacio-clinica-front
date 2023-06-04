@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Especialidade } from '../especialidade.modelo';
-import { EspecialidadeService } from '../especialidade.service';
+import { Especialidade } from '../../../models/especialidade.modelo';
+import { EspecialidadeService } from '../../../services/especialidade.service';
 import { Router } from '@angular/router';
 
 @Component({

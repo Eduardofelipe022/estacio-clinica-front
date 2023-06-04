@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UsuarioService } from '../usuario/usuario.service';
-import { Usuario } from '../usuario/usuario.modelo';
+import { UsuarioService } from '../../services/usuario.service';
+import { Usuario } from '../../models/usuario.modelo';
 
 @Component({
   selector: 'app-login',
@@ -33,10 +33,12 @@ export class LoginComponent implements OnInit {
         if (this.usuario.tipoPerfil === 'ADMIN' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
           this.router.navigate(['/home']);
         } if (this.usuario.tipoPerfil === 'ALUNO' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
-          this.router.navigate(['/alunos']);
+          this.router.navigate(['/home/aluno']);
+        } if (this.usuario.tipoPerfil === 'PROFESSOR' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
+          this.router.navigate(['/home/professor']);
         } if (this.usuario.tipoPerfil === 'RECEPCIONISTA' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
-          this.router.navigate(['/usuarios']);
-        } if (this.usuario === null){
+          this.router.navigate(['/home/recepcao']);
+        }if (this.usuario === null){
           this.service.mensagem('E-mail ou Senha incorreto!');
       }
     }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Consulta } from '../../consulta/consulta.modelo';
-import { ConsultaService } from '../../consulta/consulta.service';
-import { ClienteService } from '../cliente.service';
+import { Consulta } from '../../../models/consulta.modelo';
+import { ConsultaService } from '../../../services/consulta.service';
+import { ClienteService } from '../../../services/cliente.service';
 
 @Component({
   selector: 'app-cliente-read-consultas',

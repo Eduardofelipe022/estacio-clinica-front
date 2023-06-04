@@ -1,11 +1,11 @@
-import { Agenda } from './../agenda.modelo';
+import { Agenda } from '../../../models/agenda.modelo';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { AgendaService } from '../agenda.service';
+import { AgendaService } from '../../../services/agenda.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-import { ClienteService } from '../../cliente/cliente.service';
+import { ClienteService } from '../../../services/cliente.service';
 import { Router } from '@angular/router';
-import { Cliente } from '../../cliente/cliente.modelo';
+import { Cliente } from '../../../models/cliente.modelo';
 
 @Component({
   selector: 'app-agenda-read',

@@ -1,0 +1,37 @@
+
+.home {
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  background-color: rgb(115, 186, 228);
+}
+
+@media(max-width: 450px) {
+.home{
+    width: 70%;
+}
+}
+@media(max-width: 770px) {
+.home{
+    width: 90%;
+}
+}
+
+img {
+margin-top: 20px;
+max-width: 300px;
+margin-left: 30px;
+border-radius: 10px;
+color: white;
+box-shadow: 0, 0px 0px blue;
+text-align: center;
+transition: all 0.5s ease-in-out;
+
+}
+
+.example-card {
+max-width: 200px;
+}
+

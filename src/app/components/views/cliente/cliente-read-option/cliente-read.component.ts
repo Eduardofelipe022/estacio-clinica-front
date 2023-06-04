@@ -1,7 +1,7 @@
-import { Cliente } from '../cliente.modelo';
+import { Cliente } from '../../../models/cliente.modelo';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { ClienteService } from '../cliente.service';
+import { ClienteService } from '../../../services/cliente.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -16,7 +16,7 @@ export class ClienteReadComponent implements OnInit {
     'nome',
     'cpf',
     'dataNascimento',
-    'idade',
+    'email',
     'telefone',
     'acoes',
   ];

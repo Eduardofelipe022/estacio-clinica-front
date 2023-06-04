@@ -1,11 +1,11 @@
-import { EspecialidadeService } from './../../especialidade/especialidade.service';
+import { EspecialidadeService } from '../../../services/especialidade.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Cliente } from '../cliente.modelo';
-import { ClienteService } from '../cliente.service';
-import { Agenda } from '../../agenda/agenda.modelo';
-import { AgendaService } from '../../agenda/agenda.service';
-import { Especialidade } from '../../especialidade/especialidade.modelo';
+import { Cliente } from '../../../models/cliente.modelo';
+import { ClienteService } from '../../../services/cliente.service';
+import { Agenda } from '../../../models/agenda.modelo';
+import { AgendaService } from '../../../services/agenda.service';
+import { Especialidade } from '../../../models/especialidade.modelo';
 
 @Component({
   selector: 'app-cliente-create-agenda',

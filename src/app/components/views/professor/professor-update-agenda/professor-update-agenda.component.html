@@ -1,0 +1,81 @@
+<body>
+  <app-professor-header></app-professor-header>
+  <app-footer></app-footer>
+  <h1>Atualizar Agendamento</h1>
+<form>
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome do Paciente</mat-label>
+    <input matInput [(ngModel)]="agenda.nome" type="text" name="nome" disabled/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Data do Atendimento</mat-label>
+    <input
+    type="date"
+    matInput
+    [(ngModel)]="agenda.data"
+    type="date"
+    name="data"
+    disabled/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Telefone</mat-label>
+    <input
+    type="tel"
+    matInput maxlength="11"
+    [(ngModel)]="agenda.fone"
+    type="tel"
+    name="telefone"
+    disabled/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>CPF</mat-label>
+    <input
+    matInput maxlength="11"
+    [(ngModel)]="agenda.cpf"
+    type="text"
+    name="cpf"
+    disabled/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Especialidade</mat-label>
+    <mat-select [(ngModel)]="agenda.especialidade" name="especialidade">
+      <mat-option *ngFor="let select of especialidades" [value]="select.valor">
+        {{ select.verValor }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Aluno</mat-label>
+    <mat-select [(ngModel)]="agenda.nomeAluno" name="nomeAluno">
+      <mat-option *ngFor="let select of alunos" [value]="select.nome">
+        {{ select.nome }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="buttons">
+
+    <button
+    (click)="atualizarAgenda()"
+    class="mat-elevation-z8"
+    mat-raised-button
+    color="primary"
+    >
+    ATUALIZAR
+  </button>
+  <button
+  (click)="navegarParaAgenda()"
+      class="mat-elevation-z8"
+      mat-raised-button
+      color="warn"
+      >
+      CANCELAR
+    </button>
+  </div>
+</form>
+</body>

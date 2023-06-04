@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Aluno } from '../aluno.modelo';
+import { Aluno } from '../../../models/aluno.modelo';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AlunoService } from '../service.service';
+import { AlunoService } from '../../../services/service.service';
 
 @Component({
   selector: 'app-aluno-delete',

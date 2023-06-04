@@ -1,0 +1,84 @@
+<body>
+  <app-aluno-header></app-aluno-header>
+  <app-footer></app-footer>
+<h1>Nova Consulta</h1>
+<form>
+  <div>
+    <p>Nome do Paciente: {{ nomeCliente }}</p>
+  </div>
+    <mat-form-field class="campo_menor">
+      <mat-label>Matrícula</mat-label>
+      <input matInput [(ngModel)]="matricula"
+      type="text"
+      name="matricula" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="campo_maior">
+      <mat-label>Nome Atendente</mat-label>
+      <input matInput [(ngModel)]="nomeUsuario"
+      type="text"
+      name="nomeAtendente" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="data">
+          <mat-label>Data Consulta</mat-label>
+          <input matInput [(ngModel)]="consulta.dataConsulta"
+          type="date"
+          name="dataConsulta"required>
+        </mat-form-field>
+
+        <mat-form-field class="campo_textarea">
+            <mat-label>Queixas</mat-label>
+            <textarea matInput [(ngModel)]="consulta.queixas"
+            type="text"
+            name="queixas"
+            ></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="campo_textarea">
+            <mat-label>Plano</mat-label>
+            <textarea matInput [(ngModel)]="consulta.plano"
+            type="text"
+              name="plano"
+            ></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="campo_textarea">
+            <mat-label>Avaliação</mat-label>
+            <textarea matInput [(ngModel)]="consulta.avaliacao"
+              type="text"
+              name="avaliacao"
+              ></textarea>
+            </mat-form-field>
+
+            <mat-form-field class="campo_textarea">
+              <mat-label>Exames</mat-label>
+              <textarea matInput [(ngModel)]="consulta.exames"
+              type="text"
+              name="queixas"
+            ></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="campo_textarea">
+            <mat-label>Encaminhamento</mat-label>
+            <textarea matInput [(ngModel)]="consulta.encaminhamento"
+            type="text"
+            name="encaminhamento"
+            ></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="campo_textarea">
+            <mat-label>Observação</mat-label>
+            <textarea matInput [(ngModel)]="consulta.observacao"
+            type="text"
+            name="observacao"
+            ></textarea>
+          </mat-form-field>
+
+          <div class="buttons">
+            <button (click)="criarConsulta()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>
+            <button (click)="navegarParaListaConsultas()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
+          </div>
+        </form>
+      </body>
+

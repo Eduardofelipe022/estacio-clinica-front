@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Usuario } from '../usuario.modelo';
-import { UsuarioService } from '../usuario.service';
+import { Usuario } from '../../../models/usuario.modelo';
+import { UsuarioService } from '../../../services/usuario.service';
 
 interface TipoPerfil {
   valor: string;

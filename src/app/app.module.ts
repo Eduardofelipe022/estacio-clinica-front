@@ -32,7 +32,7 @@ import { ClienteCreateComponent } from './components/views/cliente/cliente-creat
 import { ClienteDeleteComponent } from './components/views/cliente/cliente-delete/cliente-delete.component';
 import { ClienteReadComponent } from './components/views/cliente/cliente-read-option/cliente-read.component';
 import { ClienteUpdateComponent } from './components/views/cliente/cliente-update/cliente-update.component';
-import { ClienteService } from './components/views/cliente/cliente.service';
+import { ClienteService } from './components/services/cliente.service';
 import { ConsultaCreateComponent } from './components/views/consulta/consulta-create/consulta-create.component';
 import { ClienteReadConsultasComponent } from './components/views/cliente/cliente-read-consultas/cliente-read-consultas.component';
 import { ClienteConsultaDetalhadaComponent } from './components/views/cliente/cliente-consulta-detalhada/cliente-consulta-detalhada.component';
@@ -51,6 +51,28 @@ import { UsuarioUpdateComponent } from './components/views/usuario/usuario-updat
 import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delete/usuario-delete.component';
 import  {MatCheckboxModule } from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
+import { ProfessorHomeComponent } from './components/views/professor/professor-home/professor-home.component';
+import { ProfessorHeaderComponent } from './components/template/professor-header/professor-header.component';
+import { AlunoHeaderComponent } from './components/template/aluno-header/aluno-header.component';
+import { RecepcaoHeaderComponent } from './components/template/recepcao-header/recepcao-header.component';
+import { ProfessorReadAgendaComponent } from './components/views/professor/professor-read-agenda/professor-read-agenda.component';
+import { ProfessorUpdateAgendaComponent } from './components/views/professor/professor-update-agenda/professor-update-agenda.component';
+import { ProfessorReadConsultasComponent } from './components/views/professor/professor-read-consultas/professor-read-consultas.component';
+import { ProfessorCreateConsultasComponent } from './components/views/professor/professor-create-consultas/professor-create-consultas.component';
+import { ProfessorConsultaDetalhadaComponent } from './components/views/professor/professor-consulta-detalhada/professor-consulta-detalhada.component';
+import { AlunoReadAgendaComponent } from './components/views/aluno-views/aluno-read-agenda/aluno-read-agenda.component';
+import { AlunoHomeComponent } from './components/views/aluno-views/aluno-home/aluno-home.component';
+import { AlunoReadConsultasComponent } from './components/views/aluno-views/aluno-read-consultas/aluno-read-consultas.component';
+import { AlunoCreateConsultaComponent } from './components/views/aluno-views/aluno-create-consulta/aluno-create-consulta.component';
+import { AlunoConsultaDetalhadaComponent } from './components/views/aluno-views/aluno-consulta-detalhada/aluno-consulta-detalhada.component';
+import { RecepcaoHomeComponent } from './components/views/recepcao-views/recepcao-home/recepcao-home.component';
+import { RecepcaoReadAgendaComponent } from './components/views/recepcao-views/recepcao-read-agenda/recepcao-read-agenda.component';
+import { RecepcaoReadClienteComponent } from './components/views/recepcao-views/recepcao-read-cliente/recepcao-read-cliente.component';
+import { RecepcaoCreateClienteComponent } from './components/views/recepcao-views/recepcao-create-cliente/recepcao-create-cliente.component';
+import { RecepcaoUpdateClienteComponent } from './components/views/recepcao-views/recepcao-update-cliente/recepcao-update-cliente.component';
+import { RecepcaoCreateAgendaComponent } from './components/views/recepcao-views/recepcao-create-agenda/recepcao-create-agenda.component';
+import { RecepcaoReadConsultasComponent } from './components/views/recepcao-views/recepcao-read-consultas/recepcao-read-consultas.component';
+import { RecepcaoConsultaDetalhadaComponent } from './components/views/recepcao-views/recepcao-consulta-detalhada/recepcao-consulta-detalhada.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +101,28 @@ import {MatRadioModule} from '@angular/material/radio';
     UsuarioCreateComponent,
     UsuarioUpdateComponent,
     UsuarioDeleteComponent,
+    ProfessorHomeComponent,
+    ProfessorHeaderComponent,
+    AlunoHeaderComponent,
+    RecepcaoHeaderComponent,
+    ProfessorReadAgendaComponent,
+    ProfessorUpdateAgendaComponent,
+    ProfessorReadConsultasComponent,
+    ProfessorCreateConsultasComponent,
+    ProfessorConsultaDetalhadaComponent,
+    AlunoReadAgendaComponent,
+    AlunoHomeComponent,
+    AlunoReadConsultasComponent,
+    AlunoCreateConsultaComponent,
+    AlunoConsultaDetalhadaComponent,
+    RecepcaoHomeComponent,
+    RecepcaoReadAgendaComponent,
+    RecepcaoReadClienteComponent,
+    RecepcaoCreateClienteComponent,
+    RecepcaoUpdateClienteComponent,
+    RecepcaoCreateAgendaComponent,
+    RecepcaoReadConsultasComponent,
+    RecepcaoConsultaDetalhadaComponent,
 
 
   ],

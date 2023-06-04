@@ -1,0 +1,49 @@
+img {
+  display: block;
+  margin: 0px auto;
+}
+
+.cabecalho {
+  text-align: center;
+}
+
+.centralizar{
+  text-align: center;
+}
+
+.tituloColuna{
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.tableConsulta{
+    margin: 0px auto;
+}
+
+.button {
+    margin-left: 2rem;
+}
+
+.botaoImprimir {
+  margin-left: 80%;
+  margin-right: 3px;
+}
+
+
+
+-- retirar botoes da impresao --
+.only-print{
+  display: none;
+}
+
+@media print{
+
+  .no-print{
+    display: none !important;
+  }
+
+  .only-print{
+    display: block;
+  }
+}

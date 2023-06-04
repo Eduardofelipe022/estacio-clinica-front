@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
-import { Agenda } from './agenda.modelo';
+import { Agenda } from '../models/agenda.modelo';
 
 @Injectable({
   providedIn: 'root',

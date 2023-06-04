@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Aluno } from '../aluno.modelo';
-import { AlunoService } from '../service.service';
+import { Aluno } from '../../../models/aluno.modelo';
+import { AlunoService } from '../../../services/service.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EspecialidadeService } from '../../especialidade/especialidade.service';
-import { Especialidade } from '../../especialidade/especialidade.modelo';
+import { EspecialidadeService } from '../../../services/especialidade.service';
+import { Especialidade } from '../../../models/especialidade.modelo';
 
 interface TipoPerfil {
   valor: string;

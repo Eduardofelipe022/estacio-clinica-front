@@ -1,0 +1,50 @@
+.content {
+  width: 80%;
+  margin: 1.4rem auto auto auto;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  margin-left: 5rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  margin-bottom: 1rem;
+}
+
+.total {
+  color: black;
+  margin-left: 80%;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.button_Opcoes {
+  margin-top: 15px;
+}
+
+.consultas {
+  color: rgba(196, 105, 31, 0.884);
+}
+
+.agenda {
+  color: green;
+}
+
+.edit {
+  color: blue;
+}
+
+.delete {
+  color: rgb(253, 0, 0);
+}
+
+body {
+  background-color: rgb(115, 186, 228);
+  background-size: cover;
+}

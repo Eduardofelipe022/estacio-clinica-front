@@ -1,0 +1,64 @@
+<body>
+  <app-recepcao-header class="header no-print"></app-recepcao-header>
+  <div class="content">
+    <button class="botaoImprimir no-print" onclick="window.print()" mat-fab extended color="primary">
+      <mat-icon>download</mat-icon> Imprimir
+    </button>
+    <h1>Agenda de Pacientes</h1>
+
+    <mat-form-field class="mat-mdc-form-field no-print">
+      <mat-label>Filtro</mat-label>
+      <input class="no-print" matInput [(ngModel)]="cpf" (keyup)="applyFilter($event)" #input>
+    </mat-form-field>
+
+    <a class="total no-print">Total de agendamentos:  {{ qtdAgendadas }}</a>
+
+    <div class="mat-elevation-z8 content-table">
+      <table class="table" mat-table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="nome">
+          <th mat-header-cell *matHeaderCellDef>NOME</th>
+          <td mat-cell *matCellDef="let row">{{ row.nome }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cpf">
+          <th mat-header-cell *matHeaderCellDef>CPF</th>
+      <td mat-cell *matCellDef="let row">{{ row.cpf }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="data">
+      <th mat-header-cell *matHeaderCellDef>DATA/ATENDIMENTO</th>
+      <td mat-cell *matCellDef="let row">{{ row.data }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="fone">
+      <th mat-header-cell *matHeaderCellDef>TELEFONE</th>
+      <td mat-cell *matCellDef="let row">{{ row.fone }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="especialidade">
+      <th mat-header-cell *matHeaderCellDef>ESPECIALIDADE</th>
+      <td mat-cell *matCellDef="let row">{{ row.especialidade }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nomeAluno">
+      <th mat-header-cell *matHeaderCellDef>NOME ALUNO</th>
+      <td mat-cell *matCellDef="let row">{{ row.nomeAluno }}</td>
+    </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+
+              <tr class="mat-row " *matNoDataRow>
+                <td class="mat-cell " colspan="4">Nenhum Agendamento Encontrado: "{{input.value}}"</td>
+              </tr>
+       </table>
+        <mat-paginator class="paginador no-print" [pageSizeOptions]="[5, 10, 20, 50]"
+            showFirstLastButtons
+            aria-label="Select page of periodic elements">
+          </mat-paginator>
+        </div>
+      </div>
+    </body>
+    <app-footer class="footer no-print"></app-footer>

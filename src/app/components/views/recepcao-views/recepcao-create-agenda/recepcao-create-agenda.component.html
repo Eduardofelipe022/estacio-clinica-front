@@ -1,0 +1,53 @@
+<body>
+  <app-recepcao-header></app-recepcao-header>
+  <app-footer></app-footer>
+<h1></h1>
+<h1>Novo Agendamento</h1>
+<form>
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="cliente.nome"
+    type="text"
+    name="nome" disabled>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Data</mat-label>
+    <input
+    type="date" matInput [(ngModel)]="agenda.data"
+    name="data"/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Telefone</mat-label>
+    <input type="tel" maxlength="11" matInput [(ngModel)]="cliente.telefone"
+    type="tel"
+    name="telefone"
+        placeholder="Ex: 99 99999-9999" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="campo_menor">
+      <mat-label>CPF</mat-label>
+      <input matInput maxlength="11" [(ngModel)]="cliente.cpf"
+      type="text"
+      name="cpf"
+      placeholder="Ex: 12345678901" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="campo_menor">
+      <mat-label>Especialidade</mat-label>
+      <mat-select [(ngModel)]="agenda.especialidade" name="select">
+        <mat-option *ngFor="let select of selects" [value]="select.valor">
+          {{select.verValor}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="buttons">
+
+      <button (click)="criarAgendamento()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>
+      <button (click)="navegarParaListaAgenda()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+  </form>
+</body>
+

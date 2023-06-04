@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { Cliente } from "../cliente.modelo";
-import { ClienteService } from "../cliente.service";
+import { Cliente } from "../../../models/cliente.modelo";
+import { ClienteService } from "../../../services/cliente.service";
 
 interface Sexo {
   valor: string;

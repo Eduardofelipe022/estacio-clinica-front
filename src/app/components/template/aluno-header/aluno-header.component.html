@@ -1,0 +1,22 @@
+<mat-toolbar class="header">
+  <span>
+      <img src="assets/imagem/estacio-logo1.png" alt="">
+      <p class="text">Estácio Clinica</p>
+  </span>
+  <div class="icons">
+
+    <label><mat-icon>person</mat-icon></label>
+    <p>{{ nome }}</p>
+
+    <a mat-icon-button matTooltip="Link" routerLink="/home" aria-label="Example icon-button with a heart icon"><mat-icon>home</mat-icon></a>
+    <p>Home</p>
+
+    <a mat-icon-button matTooltip="Link" routerLink="" aria-label="Example icon-button with a heart icon"><mat-icon>exit_to_app</mat-icon></a>
+    <p>Sair</p>
+
+    <button class="menu" mat-icon-button [matMenuTriggerFor]="opcoes"><mat-icon class="iconeMenu" >menu</mat-icon></button>
+    <mat-menu #opcoes="matMenu">
+    <button mat-menu-item routerLink="/aluno/agenda"><mat-icon>book</mat-icon>Agenda</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

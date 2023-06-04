@@ -1,0 +1,79 @@
+.content {
+  width: 80%;
+  margin: 1.4rem auto auto auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+}
+
+button {
+  margin-bottom: 1rem;
+}
+
+.total {
+  color: black;
+  margin-left: 60%;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.button_Opcoes {
+  margin-top: 15px;
+}
+
+.consultas {
+  color: rgba(196, 105, 31, 0.884);
+}
+
+.edit {
+  color: blue;
+}
+
+
+body {
+  background-color: rgb(115, 186, 228);
+  background-size: cover;
+}
+
+.botaoImprimir {
+  margin-left: 100%;
+}
+
+.only-print{
+  display: none;
+}
+
+@media print{
+
+  .no-print{
+    display: none !important;
+  }
+
+  .only-print{
+    display: block;
+  }
+}
+
+.demo-table {
+  width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}
