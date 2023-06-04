@@ -1,7 +1,7 @@
+<app-header></app-header>
+<app-footer></app-footer>
+<br>
 <body>
-  <app-header></app-header>
-  <app-footer></app-footer>
-  <h1>Novo Usuário</h1>
 <form>
 
   <mat-form-field class="campo_maior">
@@ -24,36 +24,6 @@
   matInput [(ngModel)]="usuario.endereco"
   type="text"
   name="endereco" required placeholder="Rua, bairro e Cidade">
-</mat-form-field>
-
-<mat-form-field class="campo_menor">
-  <mat-label>Telefone</mat-label>
-  <input type="fone" matInput maxlength="11" [(ngModel)]="usuario.telefone"
-  name="telefone"
-  placeholder="(xx) xxxxx-xxxx" required/>
-</mat-form-field>
-
-<mat-form-field class="campo_maior">
-  <mat-label>E-mail</mat-label>
-  <input type="email" matInput [(ngModel)]="usuario.email"
-  type="email"
-  name="email"
-  placeholder="Ex: clinica@estacio.com" required/>
-</mat-form-field>
-
-<mat-form-field class="campo_menor">
-  <mat-label>CPF</mat-label>
-<input matInput maxlength="11" [(ngModel)]="usuario.cpf"
-type="tel"
-name="cpf"
-placeholder="Ex: 12345678901" required/>
-</mat-form-field>
-
-<mat-form-field class="campo_maior">
-  <mat-label>Senha</mat-label>
-  <input matInput [(ngModel)]="usuario.senha"
-  type="password"
-  name="senha" required/>
 </mat-form-field>
 
 <mat-form-field class="campo_menor">

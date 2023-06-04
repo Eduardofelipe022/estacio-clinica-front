@@ -8,7 +8,7 @@ import { UsuarioService } from '../../services/usuario.service';
 })
 export class HeaderComponent implements OnInit {
 
-  private id ='';
+  private id ='1';
   nome: String = '';
   constructor(private service: UsuarioService) {}
   ngOnInit(): void {

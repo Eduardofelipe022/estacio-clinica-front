@@ -19,20 +19,17 @@
       name="matricula" required placeholder="Digite sua matricula">
     </mat-form-field>
 
-  
-<mat-form-field class="campo_maior">
+    <mat-form-field class="campo_menor">
   <mat-label>Endereço</mat-label>
-  <input
-  matInput [(ngModel)]="aluno.endereco"
-  type="text"
-  name="endereco" required placeholder="Rua, bairro e Cidade">
-</mat-form-field>
+  <input matInput [(ngModel)]="aluno.endereco"
+    type="text"
+    name="endereco" required placeholder="Rua, bairro e Cidade">
+  </mat-form-field>
 
 <mat-form-field class="campo_menor">
   <mat-label>Telefone</mat-label>
-  <input matInput maxlength="11" [(ngModel)]="aluno.telefone"
+  <input matInput maxlength="11" [(ngModel)]="aluno.telefone">
   type="text"
-  name="telefone" required placeholder="(xx) xxxxx-xxxx">
 </mat-form-field>
 
 <mat-form-field class="campo_maior">
@@ -59,21 +56,8 @@ placeholder="Ex: 12345678901" required/>
 </mat-form-field>
 
 <mat-form-field class="campo_menor">
-  <mat-label>Tipo de Perfil</mat-label>
-  <mat-select [(ngModel)]="aluno.tipoPerfil" name="select" required>
-    <mat-option *ngFor="let select of tipos" [value]="select.valor">
-      {{select.viewValor}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-
-<mat-form-field class="campo_menor">
-  <mat-label>Curso</mat-label>
-  <mat-select [(ngModel)]="aluno.curso" name="select" required>
-    <mat-option *ngFor="let select of selects" [value]="select.valor">
-      {{select.verValor}}
-    </mat-option>
-  </mat-select>
+  <mat-label>Telefone</mat-label>
+  <input matInput maxlength="11" [(ngModel)]="aluno.telefone">
 </mat-form-field>
 
   <div class="buttons">

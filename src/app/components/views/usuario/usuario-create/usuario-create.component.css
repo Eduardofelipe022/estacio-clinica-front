@@ -11,7 +11,8 @@
 }
 
 h1 {
-  text-align: center;
+margin: 2rem;
+text-align: center;
 }
 
 form {
@@ -22,16 +23,13 @@ form {
 .buttons{
   width: 100%;
   text-align: start;
-  margin-left: 2rem;
+  margin-left: 12rem;
 }
 
 button {
-  margin-right: 2rem;
+  margin: 1rem;
   padding-right: 2rem;
   padding-left: 2rem;
+
 }
 
-body {
-  background-color: rgb(115, 186, 228);
-  background-size: cover;
-}

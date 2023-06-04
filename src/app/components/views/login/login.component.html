@@ -7,10 +7,10 @@
         </span>
         <div>
           <mat-form-field class="conteudo-form">
-            <mat-label>Email</mat-label>
+            <mat-label>E-mail</mat-label>
             <input matInput [(ngModel)]="email"
               type="email"
-              name="email" required/>
+              name="email" required placeholder="Digite um e-mail válido">
           </mat-form-field>
         </div>
         <div>
@@ -19,11 +19,8 @@
             <input
               matInput
               [(ngModel)]="senha"
-              [type]="hide ? 'password' : 'text'"
-              name="senha" required/>
-              <button class="buttonVisibilidadeSenha" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-              </button>
+              type="password"
+              name="senha" required placeholder="Digite sua senha">
           </mat-form-field>
         </div>
         <div class="example-button-row">
